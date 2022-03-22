@@ -6,21 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:padding="20dp"
+    android:background="@color/black"
     >
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="150dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/Logo_256" />
 
+        android:src="@drawable/logo_256_black" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:textSize="20dp"
+    android:textColor="@color/white"
+    android:textAlignment="center"
+    android:text="A geospatial musical experience"
+    />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googlesigninbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
         />
 
 
