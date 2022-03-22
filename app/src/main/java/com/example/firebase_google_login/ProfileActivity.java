@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.firebase_google_login.databinding.ActivityProfileBinding;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -17,6 +19,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private ActivityProfileBinding binding;
     private FirebaseAuth firebaseAuth;
+    public ImageView pfp;
     GoogleSignInClient googleSignInClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,7 @@ public class ProfileActivity extends AppCompatActivity {
                 .build();
         googleSignInClient = GoogleSignIn.getClient(this,gso);
         firebaseAuth = FirebaseAuth.getInstance();
+        pfp=findViewById(R.id.pfp);
         checkUser();
 
         binding.logoutbtn.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +62,8 @@ public class ProfileActivity extends AppCompatActivity {
         else
         {
             binding.email.setText(firebaseUser.getEmail());
+            binding.name.setText(firebaseUser.getDisplayName());
+            Glide.with(ProfileActivity.this).load(firebaseUser.getPhotoUrl()).circleCrop().into(pfp);
         }
     }
 }

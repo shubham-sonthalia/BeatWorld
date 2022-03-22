@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/srija/Desktop/Sem8/MC/BeatWorld/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/srija/Desktop/Sem8/MC/NEw/BeatWorld/app/src/main/res/layout/activity_main.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/srija/Desktop/Sem8/MC/NEw/BeatWorld/app/src/main/res/layout/activity_profile.xml" value="0.19010416666666666" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
