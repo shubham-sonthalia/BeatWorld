@@ -3,18 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/nick1/Downloads/ApkStudio-5.2.4-x64/FireBase_Google_Login/app/src/main/res/drawable/ic_liked.xml" value="0.19" />
-        <entry key="..\:/Users/nick1/Downloads/ApkStudio-5.2.4-x64/FireBase_Google_Login/app/src/main/res/layout/activity_main.xml" value="0.2604166666666667" />
-        <entry key="..\:/Users/nick1/Downloads/ApkStudio-5.2.4-x64/FireBase_Google_Login/app/src/main/res/layout/activity_profile.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/nick1/Downloads/ApkStudio-5.2.4-x64/FireBase_Google_Login/app/src/main/res/layout/activity_storage.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/nick1/Downloads/ApkStudio-5.2.4-x64/FireBase_Google_Login/app/src/main/res/layout/item_post.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/srija/Desktop/Sem8/MC/BeatWorld/app/src/main/res/layout/activity_main.xml" value="0.2" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
-  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
