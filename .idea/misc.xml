@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/nick1/Downloads/ApkStudio-5.2.4-x64/FireBase_Google_Login/app/src/main/res/drawable/ic_liked.xml" value="0.19" />
         <entry key="..\:/Users/nick1/Downloads/ApkStudio-5.2.4-x64/FireBase_Google_Login/app/src/main/res/layout/activity_main.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/nick1/Downloads/ApkStudio-5.2.4-x64/FireBase_Google_Login/app/src/main/res/layout/activity_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/nick1/Downloads/ApkStudio-5.2.4-x64/FireBase_Google_Login/app/src/main/res/layout/activity_storage.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/nick1/Downloads/ApkStudio-5.2.4-x64/FireBase_Google_Login/app/src/main/res/layout/item_post.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

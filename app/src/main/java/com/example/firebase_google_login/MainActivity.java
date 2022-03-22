@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,rc_sign_in);
             }
         });
-
     }
 
     private void checkUser() {

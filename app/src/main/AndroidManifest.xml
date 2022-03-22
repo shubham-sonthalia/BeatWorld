@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FireBase_Google_Login">
         <activity
+            android:name=".storage"
+            android:exported="false" />
+        <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity

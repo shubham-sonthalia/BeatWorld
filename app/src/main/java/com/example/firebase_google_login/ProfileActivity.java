@@ -39,7 +39,12 @@ public class ProfileActivity extends AppCompatActivity {
                 checkUser();
             }
         });
-
+        binding.uploadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),storage.class));
+            }
+        });
     }
 
     private void checkUser() {
