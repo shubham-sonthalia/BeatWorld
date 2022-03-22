@@ -62,7 +62,6 @@ public class firestoreRecyclerVewAdapter extends FirestoreRecyclerAdapter<AudioF
             }
         });
     }
-
     @NonNull
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -70,7 +69,6 @@ public class firestoreRecyclerVewAdapter extends FirestoreRecyclerAdapter<AudioF
         PostViewHolder postViewHolder=new PostViewHolder(view);
         return postViewHolder;
     }
-
     public class PostViewHolder extends RecyclerView.ViewHolder{
         private ImageView userImage;
         private TextView title;
@@ -82,7 +80,6 @@ public class firestoreRecyclerVewAdapter extends FirestoreRecyclerAdapter<AudioF
             title=itemView.findViewById(R.id.postTitle);
             userName=itemView.findViewById(R.id.userName);
             createdAt=itemView.findViewById(R.id.createdAt);
-
         }
     }
 }
