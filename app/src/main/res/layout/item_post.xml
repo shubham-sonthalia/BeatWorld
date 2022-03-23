@@ -4,14 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardElevation="5dp"
-    app:cardCornerRadius="5dp"
+    app:cardCornerRadius="10dp"
     android:layout_margin="10dp"
-    android:layout_marginTop="16dp">
+    android:layout_marginTop="16dp"
+    app:cardBackgroundColor="@color/black">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_margin="5dp">
 
         <ImageView
             android:id="@+id/userImage"
@@ -22,12 +24,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/userName"
-            android:text="user name"
+            android:id="@+id/postTitle"
+            android:text="Title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
-            android:textColor="#212121"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toRightOf="@id/userImage"
@@ -41,40 +43,41 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="4dp"
+            android:textColor="@color/white"
             app:layout_constraintLeft_toRightOf="@id/userImage"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userName" />
 
         <TextView
-            android:id="@+id/postTitle"
-            android:text="title"
-            android:layout_width="0dp"
+            android:id="@+id/userName"
+            android:text="user"
+            android:layout_width="wra"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:textColor="#212121"
+            android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userImage" />
 
-        <ImageView
-            android:id="@+id/likeButton"
-            android:src="@drawable/ic_liked"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintLeft_toLeftOf="@id/postTitle"
-            app:layout_constraintTop_toBottomOf="@id/postTitle" />
+<!--        <ImageView-->
+<!--            android:id="@+id/likeButton"-->
+<!--            android:src="@drawable/ic_liked"-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            app:layout_constraintLeft_toLeftOf="@id/postTitle"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/postTitle" />-->
 
-        <TextView
-            android:id="@+id/likeCount"
-            android:text="100"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6dp"
-            app:layout_constraintBottom_toBottomOf="@id/likeButton"
-            app:layout_constraintLeft_toRightOf="@id/likeButton"
-            app:layout_constraintTop_toTopOf="@id/likeButton" />
+<!--        <TextView-->
+<!--            android:id="@+id/likeCount"-->
+<!--            android:text="100"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="6dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/likeButton"-->
+<!--            app:layout_constraintLeft_toRightOf="@id/likeButton"-->
+<!--            app:layout_constraintTop_toTopOf="@id/likeButton" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -7,32 +7,40 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#DFD2D2"
-    tools:context=".storage">
+    tools:context=".storage"
+    android:backgroundTint="@color/black" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
-        android:layout_margin="20dp"
-        android:padding="15dp">
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        >
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:id="@+id/audioName"
-            android:hint="give audio name"
-            android:textColor="@color/black"></EditText>
+            android:background="@color/black"
+            android:textColorHint="@color/grey"
+            android:hint="Enter name for your masterpiece"
+            android:textColor="@color/white"></EditText>
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
+        android:background="@color/green_spotify"
         android:padding="15dp"
         android:id="@+id/uploadAudioButton"
         android:onClick="uploadAudioFile"
-        android:text="Upload Audio"></Button>
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:text="Upload your moment"></Button>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
