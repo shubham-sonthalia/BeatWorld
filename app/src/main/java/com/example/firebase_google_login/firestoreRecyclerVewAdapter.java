@@ -82,7 +82,6 @@ public class firestoreRecyclerVewAdapter extends FirestoreRecyclerAdapter<AudioF
             title=itemView.findViewById(R.id.postTitle);
             userName=itemView.findViewById(R.id.userName);
             createdAt=itemView.findViewById(R.id.createdAt);
-
         }
     }
 }

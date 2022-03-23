@@ -48,8 +48,13 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),storage.class));
             }
         });
+        binding.map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), MapsActivity.class));
+            }
+        });
     }
-
     private void checkUser() {
 
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();

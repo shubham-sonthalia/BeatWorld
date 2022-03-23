@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardElevation="5dp"
@@ -12,8 +13,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/userImage"
@@ -25,59 +26,60 @@
 
         <TextView
             android:id="@+id/postTitle"
-            android:text="Title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
+            android:text="Title"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintLeft_toRightOf="@id/userImage"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/userImage" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="58dp" />
 
         <TextView
             android:id="@+id/createdAt"
-            android:text="created at"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="216dp"
+            android:text="created at"
             android:textColor="@color/white"
-            app:layout_constraintLeft_toRightOf="@id/userImage"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/userName" />
+            app:layout_constraintStart_toEndOf="@+id/userImage"
+            tools:layout_editor_absoluteY="39dp" />
 
         <TextView
             android:id="@+id/userName"
-            android:text="user"
-            android:layout_width="wra"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="28dp"
+            android:text="user"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/createdAt"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/userImage" />
+            app:layout_constraintStart_toEndOf="@+id/userImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.076" />
 
-<!--        <ImageView-->
-<!--            android:id="@+id/likeButton"-->
-<!--            android:src="@drawable/ic_liked"-->
-<!--            android:layout_width="24dp"-->
-<!--            android:layout_height="24dp"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            app:layout_constraintLeft_toLeftOf="@id/postTitle"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/postTitle" />-->
+        <!--        <ImageView-->
+        <!--            android:id="@+id/likeButton"-->
+        <!--            android:src="@drawable/ic_liked"-->
+        <!--            android:layout_width="24dp"-->
+        <!--            android:layout_height="24dp"-->
+        <!--            android:layout_marginTop="16dp"-->
+        <!--            app:layout_constraintLeft_toLeftOf="@id/postTitle"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/postTitle" />-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/likeCount"-->
-<!--            android:text="100"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="6dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/likeButton"-->
-<!--            app:layout_constraintLeft_toRightOf="@id/likeButton"-->
-<!--            app:layout_constraintTop_toTopOf="@id/likeButton" />-->
+        <!--        <TextView-->
+        <!--            android:id="@+id/likeCount"-->
+        <!--            android:text="100"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="6dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/likeButton"-->
+        <!--            app:layout_constraintLeft_toRightOf="@id/likeButton"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/likeButton" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

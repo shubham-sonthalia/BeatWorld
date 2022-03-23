@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MapsActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -22,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id = "@+id/bt_find"
+            android:background="@color/green_spotify"
             android:text = "Find"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
     <androidx.fragment.app.FragmentContainerView
