@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.bumptech.glide.Glide;
 import com.example.firebase_google_login.databinding.ActivityProfileBinding;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
