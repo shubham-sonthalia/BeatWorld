@@ -114,6 +114,8 @@ public class MapsActivity extends AppCompatActivity implements GoogleApiClient.C
                                 @Override
                                 public void onMapReady(@NonNull GoogleMap googleMap) {
                                     map = googleMap;
+                                    map.setMyLocationEnabled(true);
+                                    map.getUiSettings().setMyLocationButtonEnabled(true);
                                     map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(currentLat, currentLong), 10
                                     ));
                                 }
