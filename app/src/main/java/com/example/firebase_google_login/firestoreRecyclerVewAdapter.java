@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
@@ -35,7 +36,9 @@ public class firestoreRecyclerVewAdapter extends FirestoreRecyclerAdapter<AudioF
     protected void onBindViewHolder(@NonNull PostViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull AudioFile model) {
         //holder.userImage.setImageResource();
         holder.title.setText(getSnapshots().getSnapshot(position).getId());
-
+        holder.userName.setText(getItem(position).getUserName());
+        holder.createdAt.setText(getItem(position).getDate());
+        Glide.with(context).load(getItem(position).getPhotoUrl()).into(holder.userImage);
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -45,19 +48,24 @@ public class firestoreRecyclerVewAdapter extends FirestoreRecyclerAdapter<AudioF
                 Log.d("LinearLayout", "RecyclerView Clicked id is "+getItem(position).getUserName());
                 Log.d("LinearLayout", "RecyclerView Clicked id is "+getSnapshots().getSnapshot(position).getId());
 
-                MediaPlayer mp=new MediaPlayer();
-                try {
-                    //mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/project-for-mc.appspot.com/o/Aduio%2Ffavourite%20song1647518773673.mp3?alt=media&token=3e2a6e9a-1868-4495-b169-af15409ab10f");
-                    mp.setDataSource(getItem(position).getDownloadUrl());
-                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                        @Override
-                        public void onPrepared(MediaPlayer mediaPlayer) {
-                            mediaPlayer.start();
-                        }
-                    });
-                    mp.prepare();
-                } catch (IOException e) {
-                    e.printStackTrace();
+//                MediaPlayer mp=new MediaPlayer();
+//                try {
+//                    //mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/project-for-mc.appspot.com/o/Aduio%2Ffavourite%20song1647518773673.mp3?alt=media&token=3e2a6e9a-1868-4495-b169-af15409ab10f");
+//                    mp.setDataSource(getItem(position).getDownloadUrl());
+//                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//                        @Override
+//                        public void onPrepared(MediaPlayer mediaPlayer) {
+//                            mediaPlayer.start();
+//                        }
+//                    });
+//                    mp.prepare();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+
+                storage storageInstance=storage.getStorageInstance();
+                if(storageInstance != null){
+                    storageInstance.playAudioUsingMediaPlayer(position);
                 }
             }
         });

@@ -77,12 +77,13 @@ public class MainActivity extends AppCompatActivity {
             Log.d(tag,"onActivityResult: Google SignIn Intent result");
             Task<GoogleSignInAccount> accountTask = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
+                Log.v("checking","in try block");
                     GoogleSignInAccount account = accountTask.getResult(ApiException.class);
                     firebaseAuthWithGoogleAccount(account);
             }
             catch (Exception e)
             {
-                Log.d(tag,"onActivityResult: " + e.getMessage());
+                Log.e(tag,e.toString());
             }
                 
         }
@@ -119,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.d(tag,"onFailure: Logged " + e.getMessage());
+                        Log.e(tag,"onFailure: Logged " + e.getMessage());
                     }
                 });
     }

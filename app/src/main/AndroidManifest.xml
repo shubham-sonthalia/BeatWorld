@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo_256_black"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        android:theme="@style/Theme.FireBase_Google_Login">
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

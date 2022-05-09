@@ -10,43 +10,50 @@
     tools:context=".storage"
     android:backgroundTint="@color/black" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="30dp"
-        >
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:id="@+id/audioName"
-            android:background="@color/black"
-            android:textColorHint="@color/grey"
-            android:hint="Enter name for your masterpiece"
-            android:textColor="@color/white"></EditText>
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/white"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginHorizontal="20dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        >-->
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:id="@+id/audioName"-->
+<!--            android:background="@color/black"-->
+<!--            android:textColorHint="@color/grey"-->
+<!--            android:hint="Enter name for your masterpiece"-->
+<!--            android:textColor="@color/white"></EditText>-->
+<!--    </LinearLayout>-->
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:layout_margin="10dp"
-        android:background="@color/green_spotify"
-        android:padding="15dp"
-        android:id="@+id/uploadAudioButton"
-        android:onClick="uploadAudioFile"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        style="@style/TextAppearance.MaterialComponents.Headline6"
-        android:text="Upload your moment"></Button>
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:background="@color/green_spotify"-->
+<!--        android:padding="15dp"-->
+<!--        android:id="@+id/uploadAudioButton"-->
+<!--        android:onClick="uploadAudioFile"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textStyle="bold"-->
+<!--        style="@style/TextAppearance.MaterialComponents.Headline6"-->
+<!--        android:text="Upload your moment"></Button>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
         android:id="@+id/recyclerView"
-
         tools:listitem="@layout/item_post"/>
+
+    <com.example.jean.jcplayer.view.JcPlayerView
+        android:id="@+id/jcplayer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/green_spotify"
+        android:layout_weight="2"/>
 
 </LinearLayout>
