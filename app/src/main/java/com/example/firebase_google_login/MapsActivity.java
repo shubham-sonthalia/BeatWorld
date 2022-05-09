@@ -116,7 +116,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleApiClient.C
                                     map = googleMap;
                                     map.setMyLocationEnabled(true);
                                     map.getUiSettings().setMyLocationButtonEnabled(true);
-                                    map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(currentLat, currentLong), 10
+                                    map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(currentLat, currentLong), 50
                                     ));
                                 }
                             });
