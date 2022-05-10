@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -42,6 +43,14 @@ public class UserDataFirestoreRecyclerViewAdapter extends FirestoreRecyclerAdapt
         Glide.with(context).load(getItem(position).getPhotoUrl()).into(holder.userImage);
 
 
+        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("recyclerViewUserData","delete is clicked");
+            }
+        });
+
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,7 +71,7 @@ public class UserDataFirestoreRecyclerViewAdapter extends FirestoreRecyclerAdapt
     @NonNull
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_post,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_post_for_user_data,parent,false);
         PostViewHolder postViewHolder=new PostViewHolder(view);
         return postViewHolder;
     }
@@ -72,12 +81,14 @@ public class UserDataFirestoreRecyclerViewAdapter extends FirestoreRecyclerAdapt
         private TextView title;
         private TextView userName;
         private TextView createdAt;
+        private ImageButton deleteButton;
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
-            userImage=itemView.findViewById(R.id.userImage);
-            title=itemView.findViewById(R.id.postTitle);
-            userName=itemView.findViewById(R.id.userName);
-            createdAt=itemView.findViewById(R.id.createdAt);
+            userImage=itemView.findViewById(R.id.userImageForUserData);
+            title=itemView.findViewById(R.id.postTitleForUserData);
+            userName=itemView.findViewById(R.id.userNameForUserData);
+            createdAt=itemView.findViewById(R.id.createdAtForUserData);
+            deleteButton=itemView.findViewById(R.id.deleteForUserData);
         }
     }
 }
