@@ -83,6 +83,7 @@ public class storage extends AppCompatActivity {
         title = intent.getStringExtra("title");
 
         getLocationFromMap=String.valueOf(lat) + "," + String.valueOf(lng) + " " + title;
+        Log.i("storage activity","current location = "+getLocationFromMap);
 
        // getLocationFromMap="38.8951,-77.0364";
         if(lat == 38.8951 && lng == -77.0364){
@@ -172,7 +173,7 @@ public class storage extends AppCompatActivity {
         if(position<jcAudios.size()) {
             Log.d("MusicNumber", position + "");
             jcplayerView.playAudio(jcAudios.get(position));
-//            jcplayerView.createNotification();
+            jcplayerView.createNotification();
         }
         //position=Integer.MAX_VALUE;
 
