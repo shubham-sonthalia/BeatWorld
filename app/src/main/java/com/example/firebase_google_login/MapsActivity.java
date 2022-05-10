@@ -9,6 +9,7 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
@@ -31,6 +32,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
@@ -46,7 +48,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 
-public class MapsActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
+public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMarkerClickListener, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, OnMapReadyCallback {
     Spinner spType;
     Button btFind;
@@ -167,22 +169,19 @@ public class MapsActivity extends AppCompatActivity implements GoogleApiClient.C
     public void onMapReady(@NonNull GoogleMap googleMap) {
         map = googleMap;
     }
-    //    }
-//    @Override
-//    public void onLocationChanged(@NonNull Location location) {
-//        handleNewLocation(location);
-//    }
-//    private void handleNewLocation(Location location) {
-//        Log.d(TAG, location.toString());
-//        double currentLatitude = location.getLatitude();
-//        double currentLongitude = location.getLongitude();
-//        LatLng latLng = new LatLng(currentLatitude, currentLongitude);
-//        MarkerOptions options = new MarkerOptions()
-//                .position(latLng)
-//                .title("Your Location!");
-//        map.addMarker(options);
-//        map.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-//    }
+
+    @Override
+    public boolean onMarkerClick(@NonNull Marker marker) {
+        double lat = marker.getPosition().latitude;
+        double lng = marker.getPosition().longitude;
+        String title = marker.getTitle();
+        Intent intent = new Intent(this,ProfileActivity.class);
+        intent.putExtra("lat", lat);
+        intent.putExtra("long", lng);
+        intent.putExtra("title", title);
+        startActivity(intent);
+        return false;
+    }
     private class PlaceTask extends AsyncTask<String, Integer, String> {
         @Override
         protected String doInBackground(String... strings) {
@@ -242,6 +241,20 @@ public class MapsActivity extends AppCompatActivity implements GoogleApiClient.C
                 options.position(latLng);
                 options.title(name);
                 map.addMarker(options);
+                map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                    @Override
+                    public boolean onMarkerClick(@NonNull Marker marker) {
+                        double lat = marker.getPosition().latitude;
+                        double lng = marker.getPosition().longitude;
+                        String title = marker.getTitle();
+                        Intent intent = new Intent(getApplicationContext(),storage.class);
+                        intent.putExtra("lat", lat);
+                        intent.putExtra("long", lng);
+                        intent.putExtra("title", title);
+                        startActivity(intent);
+                        return false;
+                    }
+                });
             }
         }
     }

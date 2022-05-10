@@ -89,6 +89,13 @@ public class storage extends AppCompatActivity {
         adapter=new firestoreRecyclerVewAdapter(options,this);
         recyclerView.setAdapter(adapter);
 
+        double lat, lng;
+        String title;
+        Intent intent = this.getIntent();
+        lat = intent.getDoubleExtra("lat", 38.8951);
+        lng = intent.getDoubleExtra("lng", -77.0364);
+        title = intent.getStringExtra("title");
+        
 //        FirebaseFirestore.getInstance().collection(getLocationFromMap).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
 //            @Override
 //            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
