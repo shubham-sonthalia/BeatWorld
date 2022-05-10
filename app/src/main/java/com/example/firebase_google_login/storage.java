@@ -257,6 +257,10 @@ public class storage extends AppCompatActivity {
                                 AudioFile audioFile = new AudioFile(userName,photoUrl,userUid,100,audioUrl,createdAt,date);
                                 //String getLocationFromMap="38.8951,-77.0364";
                                 audioFile.uploadAudioFile(getLocationFromMap,songName,audioFile);
+
+                                AudioFile tempAudioFile=new AudioFile(getLocationFromMap,photoUrl,userUid,100,audioUrl,createdAt,date);
+                                tempAudioFile.uploadUserData(userUid,songName,tempAudioFile);
+
                                 Toast.makeText(storage.this, "audio uploaded to Firestore", Toast.LENGTH_SHORT).show();
                                 Log.i("URL",audioUrl);
                                 progressDialog.dismiss();
