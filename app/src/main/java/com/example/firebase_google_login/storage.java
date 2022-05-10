@@ -75,9 +75,19 @@ public class storage extends AppCompatActivity {
         jcplayerView =  findViewById(R.id.jcplayer);
         jcAudios = new ArrayList<>();
         storageInstance=this;
+        double lat, lng;
+        String title;
+        Intent intent = this.getIntent();
+        lat = intent.getDoubleExtra("lat", 38.8951);
+        lng = intent.getDoubleExtra("lng", -77.0364);
+        title = intent.getStringExtra("title");
 
-        getLocationFromMap="38.8951,-77.0364";
+        getLocationFromMap=String.valueOf(lat) + "," + String.valueOf(lng) + " " + title;
 
+       // getLocationFromMap="38.8951,-77.0364";
+        if(lat == 38.8951 && lng == -77.0364){
+            getLocationFromMap="38.8951,-77.0364";
+        }
 
         FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
         FirestoreRecyclerOptions<AudioFile> options = new FirestoreRecyclerOptions.Builder<AudioFile>()
@@ -89,6 +99,8 @@ public class storage extends AppCompatActivity {
         adapter=new firestoreRecyclerVewAdapter(options,this);
         recyclerView.setAdapter(adapter);
 
+
+        
 //        FirebaseFirestore.getInstance().collection(getLocationFromMap).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
 //            @Override
 //            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -160,7 +172,7 @@ public class storage extends AppCompatActivity {
         if(position<jcAudios.size()) {
             Log.d("MusicNumber", position + "");
             jcplayerView.playAudio(jcAudios.get(position));
-            jcplayerView.createNotification();
+//            jcplayerView.createNotification();
         }
         //position=Integer.MAX_VALUE;
 
