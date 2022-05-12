@@ -82,7 +82,8 @@ public class storage extends AppCompatActivity {
         lng = intent.getDoubleExtra("lng", -77.0364);
         title = intent.getStringExtra("title");
 
-        getLocationFromMap=String.valueOf(lat) + "," + String.valueOf(lng) + " " + title;
+        //getLocationFromMap=String.valueOf(lat) + "," + String.valueOf(lng) + " " + title;
+        getLocationFromMap=title;
         Log.i("storage activity","current location = "+getLocationFromMap);
 
        // getLocationFromMap="38.8951,-77.0364";
@@ -245,7 +246,7 @@ public class storage extends AppCompatActivity {
 
 
                 Toast.makeText(this, "Audio select", Toast.LENGTH_SHORT).show();
-                StorageReference storageReference= FirebaseStorage.getInstance().getReference().child("Aduio").child(audioNameText+".mp3");
+                StorageReference storageReference= FirebaseStorage.getInstance().getReference().child("Aduio").child(songName+".mp3");
                 storageReference.putFile(audioUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
