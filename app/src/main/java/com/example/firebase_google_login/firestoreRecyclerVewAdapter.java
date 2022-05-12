@@ -2,6 +2,7 @@ package com.example.firebase_google_login;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -63,10 +64,17 @@ public class firestoreRecyclerVewAdapter extends FirestoreRecyclerAdapter<AudioF
 //                    e.printStackTrace();
 //                }
 
-                storage storageInstance=storage.getStorageInstance();
-                if(storageInstance != null){
-                    storageInstance.playAudioUsingMediaPlayer(position);
-                }
+                Intent intent =new Intent(context, MusicPlayerActivity.class);
+                //intent.putExtra("postion",position);
+                intent.putExtra("downloadLink",getItem(position).getDownloadUrl());
+                intent.putExtra("songName",getSnapshots().getSnapshot(position).getId());
+                context.startActivity(intent);
+
+
+//                storage storageInstance=storage.getStorageInstance();
+//                if(storageInstance != null){
+//                    storageInstance.playAudioUsingMediaPlayer(position);
+//                }
             }
         });
     }

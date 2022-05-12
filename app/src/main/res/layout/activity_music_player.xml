@@ -47,7 +47,7 @@
         android:background="@drawable/one_direction"
         android:scaleType="centerCrop" />
     <com.example.jean.jcplayer.view.JcPlayerView
-        android:id="@+id/jcplayer"
+        android:id="@+id/jcplayerMusicPlayer"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_alignParentBottom="true"
