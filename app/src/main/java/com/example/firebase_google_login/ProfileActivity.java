@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity implements ExampleDialog.ExampleDialogListener{
 
     private ActivityProfileBinding binding;
     private FirebaseAuth firebaseAuth;
@@ -56,7 +56,9 @@ public class ProfileActivity extends AppCompatActivity {
         binding.uploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),storage.class));
+                //startActivity(new Intent(getApplicationContext(),storage.class));
+                Intent intent=new Intent(ProfileActivity.this,UserData.class);
+                startActivity(intent);
             }
         });
         binding.map.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +73,10 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),find_frnds.class));
             }
         });
+    }
+    public void openDialog() {
+        ExampleDialog exampleDialog = new ExampleDialog();
+        exampleDialog.show(getSupportFragmentManager(), "example dialog");
     }
     private void checkUser() {
 
@@ -108,5 +114,10 @@ public class ProfileActivity extends AppCompatActivity {
     public void goToUserData(View v){
         Intent intent=new Intent(this,UserData.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void applyTexts(String username, String password) {
+
     }
 }

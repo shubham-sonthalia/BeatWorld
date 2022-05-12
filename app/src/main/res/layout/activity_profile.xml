@@ -37,9 +37,6 @@
         android:layout_height="wrap_content"
         android:text="Email"
         android:textColor="@color/grey"/>
-    <!--    <ScrollView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content">-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -135,4 +132,5 @@
             style="@style/TextAppearance.MaterialComponents.Headline6"
             android:textColor="@color/green_spotify"/>
         </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
