@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -50,7 +51,7 @@ import java.util.Collections;
 import java.util.Date;
 
 
-public class storage extends AppCompatActivity {
+public class storage extends AppCompatActivity implements ExampleDialog.ExampleDialogListener {
 
     private static final int PICK_AUDIO =123;
     Button audioupload;
@@ -58,7 +59,7 @@ public class storage extends AppCompatActivity {
     String audioNameText;
     private firestoreRecyclerVewAdapter adapter;
     String getLocationFromMap;
-    long createdAt;
+    static long createdAt;
 
     JcPlayerView jcplayerView;
     ArrayList<JcAudio> jcAudios;
@@ -193,6 +194,11 @@ public class storage extends AppCompatActivity {
         adapter.stopListening();
     }
 
+    @Override
+    public void applyTexts(String username, String password) {
+
+    }
+
     private class CustomLinearLayoutManager extends LinearLayoutManager {
 
         public CustomLinearLayoutManager(Context context) {
@@ -212,7 +218,7 @@ public class storage extends AppCompatActivity {
 
 
 
-    public void uploadAudioFile(){
+    public static void uploadAudioFile(Activity activity){
         //audioNameText=audioName.getText().toString().trim();
         //createdAt=System.currentTimeMillis();
         //if(audioNameText.length()>0) {
@@ -221,7 +227,7 @@ public class storage extends AppCompatActivity {
             Intent intent = new Intent();
             intent.setType("audio/*");
             intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent, "Select Audio"), PICK_AUDIO);
+            activity.startActivityForResult(Intent.createChooser(intent, "Select Audio"), PICK_AUDIO);
 //            audioName.setText("");
 //        }
 //        else{
@@ -311,8 +317,12 @@ public class storage extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==R.id.uploadMenuIcon){
-            uploadAudioFile();
+            openDialog();
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void openDialog() {
+        ExampleDialog exampleDialog = new ExampleDialog();
+        exampleDialog.show(getSupportFragmentManager(), "example dialog");
     }
 }
