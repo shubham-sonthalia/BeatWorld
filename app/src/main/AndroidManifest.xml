@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FireBase_Google_Login">
         <activity
+            android:name=".MusicPlayerActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserData"
             android:exported="false" />
 
