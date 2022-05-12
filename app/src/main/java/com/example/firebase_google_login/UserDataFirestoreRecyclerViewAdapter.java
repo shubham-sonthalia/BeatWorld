@@ -55,7 +55,7 @@ public class UserDataFirestoreRecyclerViewAdapter extends FirestoreRecyclerAdapt
                 //Log.i("recyclerViewUserData","delete is clicked");
                 new AlertDialog.Builder(context)
                         .setCancelable(false)
-                        .setMessage("Are You Sure")
+                        .setMessage("Are You Sure?")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface paramDialogInterface, int paramInt) {

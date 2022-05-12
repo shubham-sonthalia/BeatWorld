@@ -56,7 +56,9 @@ public class ProfileActivity extends AppCompatActivity implements ExampleDialog.
         binding.uploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),storage.class));
+                //startActivity(new Intent(getApplicationContext(),storage.class));
+                Intent intent=new Intent(ProfileActivity.this,UserData.class);
+                startActivity(intent);
             }
         });
         binding.map.setOnClickListener(new View.OnClickListener() {
