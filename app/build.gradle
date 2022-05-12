@@ -30,6 +30,7 @@ android {
     buildFeatures{
         viewBinding true
     }
+    namespace 'com.example.firebase_google_login'
 }
 dependencies {
 
