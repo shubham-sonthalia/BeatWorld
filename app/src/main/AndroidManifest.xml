@@ -13,10 +13,13 @@
         android:roundIcon="@drawable/logo_256_black"
         android:supportsRtl="true"
         android:theme="@style/Theme.FireBase_Google_Login">
+        <activity
+            android:name=".UserData"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBsuiHoqJ3Yj8HDGJ0zpWYAseremJIwn_A"/>
+            android:value="AIzaSyBsuiHoqJ3Yj8HDGJ0zpWYAseremJIwn_A" />
 
         <activity
             android:name=".MapsActivity"
@@ -32,6 +35,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

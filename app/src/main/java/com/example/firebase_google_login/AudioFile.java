@@ -10,6 +10,7 @@ public class AudioFile implements Comparable{
     private String downloadUrl;
     private long createdAt;
     private String date;
+    private FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
 
 
 
@@ -57,8 +58,12 @@ public class AudioFile implements Comparable{
     }
 
     public void uploadAudioFile(String location,String audioFileName,AudioFile audioFile){
-        FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
+        //FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
         firebaseFirestore.collection(location).document(audioFileName).set(audioFile);
+    }
+
+    public void uploadUserData(String userUID,String audioFileName, AudioFile audioFile){
+        firebaseFirestore.collection(userUID).document(audioFileName).set(audioFile);
     }
 
     @Override

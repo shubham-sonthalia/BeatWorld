@@ -70,4 +70,9 @@ public class ProfileActivity extends AppCompatActivity {
             Glide.with(ProfileActivity.this).load(firebaseUser.getPhotoUrl()).circleCrop().into(pfp);
         }
     }
+
+    public void goToUserData(View v){
+        Intent intent=new Intent(this,UserData.class);
+        startActivity(intent);
+    }
 }
