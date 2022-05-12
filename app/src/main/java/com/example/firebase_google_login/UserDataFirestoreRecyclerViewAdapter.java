@@ -1,7 +1,9 @@
 package com.example.firebase_google_login;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +19,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 //public class UserDataFirestoreRecyclerViewAdapter {
 //}
@@ -46,7 +52,29 @@ public class UserDataFirestoreRecyclerViewAdapter extends FirestoreRecyclerAdapt
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("recyclerViewUserData","delete is clicked");
+                //Log.i("recyclerViewUserData","delete is clicked");
+                new AlertDialog.Builder(context)
+                        .setCancelable(false)
+                        .setMessage("Are You Sure")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                                FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
+                                FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
+                                String userUid=firebaseUser.getUid();
+                                firebaseFirestore.collection(userUid).document(holder.title.getText().toString()).delete();
+                                //Toast.makeText(context, "Delecte is clicked", Toast.LENGTH_SHORT).show();
+                                firebaseFirestore.collection(holder.userName.getText().toString()).document(holder.title.getText().toString()).delete();
+                            }
+                        })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
