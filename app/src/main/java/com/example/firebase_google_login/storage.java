@@ -101,8 +101,6 @@ public class storage extends AppCompatActivity {
         adapter=new firestoreRecyclerVewAdapter(options,this);
         recyclerView.setAdapter(adapter);
 
-
-        
 //        FirebaseFirestore.getInstance().collection(getLocationFromMap).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
 //            @Override
 //            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {

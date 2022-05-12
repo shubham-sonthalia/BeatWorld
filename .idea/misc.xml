@@ -3,19 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/drawable/ic_cloud_upload.xml" value="0.325" />
-        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_main.xml" value="0.371875" />
-        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_profile.xml" value="0.371875" />
-        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_storage.xml" value="0.371875" />
-        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_user_data.xml" value="0.371875" />
-        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/item_post.xml" value="0.371875" />
-        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/item_post_for_user_data.xml" value="0.371875" />
-        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/singlerow.xml" value="0.371875" />
-        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/menu/upload_icon.xml" value="0.371875" />
+<<<<<<< HEAD
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.2375" />
+        <entry key="app/src/main/res/drawable/ic_liked.xml" value="0.2375" />
+        <entry key="app/src/main/res/drawable/ic_unliked.xml" value="0.2375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/activity_music_player.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/activity_storage.xml" value="0.2520833333333333" />
+        <entry key="app/src/main/res/layout/activity_user_data.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/include_toolbar.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/item_post.xml" value="0.3098958333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+=======
+        <entry key="..\:/lectures/8/MC/android_projects/BeatWorld2/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.176" />
+        <entry key="..\:/lectures/8/MC/android_projects/BeatWorld2/app/src/main/res/layout/activity_find_frnds.xml" value="0.2734375" />
+        <entry key="..\:/lectures/8/MC/android_projects/BeatWorld2/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/lectures/8/MC/android_projects/BeatWorld2/app/src/main/res/layout/activity_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/lectures/8/MC/android_projects/BeatWorld2/app/src/main/res/layout/singlerow.xml" value="0.27447916666666666" />
+        <entry key="..\:/lectures/8/MC/android_projects/BeatWorld2/app/src/main/res/menu/searchmenu.xml" value="0.27447916666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+>>>>>>> c9df78c6a88c33625090a10567c3fda736c15c39
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
