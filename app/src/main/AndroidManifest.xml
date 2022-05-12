@@ -30,8 +30,13 @@
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
+            android:name=".find_frnds"
+            android:exported="false"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

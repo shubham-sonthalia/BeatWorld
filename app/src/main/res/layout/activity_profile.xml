@@ -59,15 +59,25 @@
             android:text="Explore Places"
             android:textColor="@color/white"
             android:background="@color/green_spotify"/>
+
         <Button
             android:id="@+id/logoutbtn"
-            android:layout_marginTop="15dp"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_height="30dp"
-            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
             android:background="@color/red"
-            android:text="Sign out"/>
+            android:text="Sign out"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/explore_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/red"
+            android:text="Explore People"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
