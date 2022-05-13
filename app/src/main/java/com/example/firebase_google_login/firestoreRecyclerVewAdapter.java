@@ -69,7 +69,7 @@ public class firestoreRecyclerVewAdapter extends FirestoreRecyclerAdapter<AudioF
                 intent.putExtra("downloadLink",getItem(position).getDownloadUrl());
                 intent.putExtra("songName",getSnapshots().getSnapshot(position).getId());
                 intent.putExtra("imageUrl",getItem(position).getUploadedImageUrl());
-                intent.putExtra("quote",getItem(position).getUploadedImageUrl());
+                intent.putExtra("quote",getItem(position).getQuote());
                 context.startActivity(intent);
 
 
