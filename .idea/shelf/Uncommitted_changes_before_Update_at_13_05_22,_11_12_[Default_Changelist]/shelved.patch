@@ -1,0 +1,548 @@
+Index: app/src/main/res/layout/activity_music_player.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    android:id=\"@+id/relativeLayout\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\">\n\n\n    <ImageView\n        android:id=\"@+id/imageView\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"match_parent\"\n        android:background=\"@color/black\"\n        android:scaleType=\"centerCrop\" />\n\n    <TextView\n        android:id=\"@+id/musicTitle\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_centerHorizontal=\"true\"\n        android:layout_marginTop=\"20dp\"\n        android:text=\"Music Title\"\n        android:textColor=\"#FFFFFF\"\n        android:textSize=\"20sp\" />\n\n    <TextView\n        android:id=\"@+id/musicArtistName\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_below=\"@+id/musicTitle\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"Singer Name - Artist Here\"\n        android:textColor=\"#FFFFFF\"\n        android:textSize=\"14sp\" />\n\n    <ImageView\n        android:id=\"@+id/songImage\"\n        android:layout_width=\"300dp\"\n        android:layout_height=\"300dp\"\n        android:layout_alignParentStart=\"true\"\n        android:layout_alignParentTop=\"true\"\n        android:layout_alignParentEnd=\"true\"\n        android:layout_alignParentBottom=\"true\"\n        android:layout_marginStart=\"99dp\"\n        android:layout_marginTop=\"200dp\"\n        android:layout_marginEnd=\"112dp\"\n        android:layout_marginBottom=\"293dp\"\n        android:background=\"@drawable/one_direction\"\n        android:scaleType=\"centerCrop\" />\n\n    <com.example.jean.jcplayer.view.JcPlayerView\n        android:id=\"@+id/jcplayerMusicPlayer\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"200dp\"\n        android:layout_alignParentBottom=\"true\"\n        android:layout_marginBottom=\"-44dp\"\n        android:layout_weight=\"2\"\n        android:background=\"@color/green_spotify\" />\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_music_player.xml b/app/src/main/res/layout/activity_music_player.xml
+--- a/app/src/main/res/layout/activity_music_player.xml	(revision eafb5aa04371616a214d38567e16f829d6fb0ab3)
++++ b/app/src/main/res/layout/activity_music_player.xml	(date 1652420507081)
+@@ -28,6 +28,7 @@
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/musicTitle"
++        android:visibility="gone"
+         android:layout_centerHorizontal="true"
+         android:text="Singer Name - Artist Here"
+         android:textColor="#FFFFFF"
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_13-05-2022_01_32_AM__Default_Changelist_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_13-05-2022_01_32_AM__Default_Changelist_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_13-05-2022_01_32_AM__Default_Changelist_.xml
+new file mode 100644
+--- /dev/null	(date 1652420507060)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_13-05-2022_01_32_AM__Default_Changelist_.xml	(date 1652420507060)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_13-05-2022_01_32_AM_[Default_Changelist]" date="1652385744485" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-05-2022_01_32_AM_[Default_Changelist]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 13-05-2022 01:32 AM [Default Changelist]" />
++</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_13-05-2022_01_32_AM_[Default_Changelist]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_13-05-2022_01_32_AM_[Default_Changelist]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_13-05-2022_01_32_AM_[Default_Changelist]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1652420507058)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_13-05-2022_01_32_AM_[Default_Changelist]/shelved.patch	(date 1652420507058)
+@@ -0,0 +1,22 @@
++Index: .idea/misc.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Semester 8/BeatWorld/app/src/main/res/drawable/ic_cloud_upload.xml\" value=\"0.325\" />\r\n        <entry key=\"..\\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_main.xml\" value=\"0.371875\" />\r\n        <entry key=\"..\\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_music_player.xml\" value=\"0.371875\" />\r\n        <entry key=\"..\\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_profile.xml\" value=\"0.371875\" />\r\n        <entry key=\"..\\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_storage.xml\" value=\"0.371875\" />\r\n        <entry key=\"..\\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_user_data.xml\" value=\"0.371875\" />\r\n        <entry key=\"..\\:/Semester 8/BeatWorld/app/src/main/res/layout/item_post.xml\" value=\"0.371875\" />\r\n        <entry key=\"..\\:/Semester 8/BeatWorld/app/src/main/res/layout/item_post_for_user_data.xml\" value=\"0.371875\" />\r\n        <entry key=\"..\\:/Semester 8/BeatWorld/app/src/main/res/layout/singlerow.xml\" value=\"0.371875\" />\r\n        <entry key=\"..\\:/Semester 8/BeatWorld/app/src/main/res/menu/upload_icon.xml\" value=\"0.371875\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/misc.xml b/.idea/misc.xml
++--- a/.idea/misc.xml	(revision e2bd3e141b90974490d9d47c198254a3e7293bdb)
+++++ b/.idea/misc.xml	(date 1652385632086)
++@@ -9,9 +9,11 @@
++         <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_profile.xml" value="0.371875" />
++         <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_storage.xml" value="0.371875" />
++         <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/activity_user_data.xml" value="0.371875" />
+++        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/include_toolbar.xml" value="0.371875" />
++         <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/item_post.xml" value="0.371875" />
++         <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/item_post_for_user_data.xml" value="0.371875" />
++         <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/layout/singlerow.xml" value="0.371875" />
+++        <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/menu/searchmenu.xml" value="0.371875" />
++         <entry key="..\:/Semester 8/BeatWorld/app/src/main/res/menu/upload_icon.xml" value="0.371875" />
++       </map>
++     </option>
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\n    id 'com.android.application'\n    id 'com.google.gms.google-services'\n    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'\n}\n\nandroid {\n    compileSdk 32\n\n    defaultConfig {\n        applicationId \"com.example.firebase_google_login\"\n        minSdk 21\n        targetSdk 32\n        versionCode 1\n        versionName \"1.0\"\n\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n    }\n\n    buildTypes {\n        release {\n            minifyEnabled false\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\n        }\n    }\n    compileOptions {\n        sourceCompatibility JavaVersion.VERSION_1_8\n        targetCompatibility JavaVersion.VERSION_1_8\n    }\n    buildFeatures{\n        viewBinding true\n    }\n    namespace 'com.example.firebase_google_login'\n}\ndependencies {\n\n    implementation 'androidx.appcompat:appcompat:1.4.1'\n    implementation 'com.google.android.material:material:1.5.0'\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'\n    implementation 'com.google.firebase:firebase-auth:19.2.0'\n\n    //\n    implementation 'com.google.firebase:firebase-storage:20.0.1'\n    implementation 'com.google.firebase:firebase-firestore:24.0.2'\n    implementation 'com.firebaseui:firebase-ui-firestore:8.0.0'\n    implementation 'androidx.cardview:cardview:1.0.0'\n\n    implementation 'androidx.appcompat:appcompat:1.4.1'\n    implementation 'com.google.android.material:material:1.5.0'\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'\n    implementation 'com.google.firebase:firebase-auth:19.2.0'\n    implementation 'de.hdodenhof:circleimageview:3.1.0'\n    implementation 'com.firebaseui:firebase-ui-database:8.0.1'\n    implementation 'com.google.firebase:firebase-storage:20.0.1'\n    implementation 'com.google.firebase:firebase-firestore:24.0.2'\n    implementation 'com.firebaseui:firebase-ui-firestore:8.0.1'\n    implementation 'androidx.cardview:cardview:1.0.0'\n    implementation 'com.firebaseui:firebase-ui-storage:8.0.1'\n    implementation 'com.firebaseui:firebase-ui-auth:8.0.1'\n    implementation 'com.google.android.gms:play-services-auth:20.1.0'\n    implementation 'com.google.firebase:firebase-database:20.0.4'\n    testImplementation 'junit:junit:4.13.2'\n    implementation \"androidx.recyclerview:recyclerview:1.2.1\"\n    // For control over item selection of both touch and mouse driven selection\n    implementation \"androidx.recyclerview:recyclerview-selection:1.1.0\"\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\n    implementation 'com.google.android.gms:play-services-auth:20.1.0'\n    testImplementation 'junit:junit:4.13.2'\n    implementation 'com.github.dhaval2404:imagepicker:2.1'\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\n    implementation 'com.github.bumptech.glide:glide:4.12.0'\n    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'\n    implementation 'com.google.android.gms:play-services-maps:18.0.2'\n    implementation 'com.google.android.gms:play-services-location:19.0.1'\n\n\n    implementation 'com.github.bumptech.glide:glide:4.13.0'\n    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'\n\n    implementation 'com.github.jeancsanchez:JcPlayer:2.7.1'\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision eafb5aa04371616a214d38567e16f829d6fb0ab3)
++++ b/app/build.gradle	(date 1652420507063)
+@@ -59,6 +59,7 @@
+     implementation 'com.firebaseui:firebase-ui-auth:8.0.1'
+     implementation 'com.google.android.gms:play-services-auth:20.1.0'
+     implementation 'com.google.firebase:firebase-database:20.0.4'
++    implementation 'com.google.android.gms:play-services-cast-framework:21.0.1'
+     testImplementation 'junit:junit:4.13.2'
+     implementation "androidx.recyclerview:recyclerview:1.2.1"
+     // For control over item selection of both touch and mouse driven selection
+Index: app/src/main/java/com/example/firebase_google_login/firestoreRecyclerVewAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.firebase_google_login;\n\nimport android.annotation.SuppressLint;\nimport android.content.Context;\nimport android.content.Intent;\nimport android.media.MediaPlayer;\nimport android.util.Log;\nimport android.view.LayoutInflater;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.widget.ImageView;\nimport android.widget.TextView;\n\nimport androidx.annotation.NonNull;\nimport androidx.recyclerview.widget.RecyclerView;\n\nimport com.bumptech.glide.Glide;\nimport com.firebase.ui.firestore.FirestoreRecyclerAdapter;\nimport com.firebase.ui.firestore.FirestoreRecyclerOptions;\n\nimport java.io.IOException;\n\npublic class firestoreRecyclerVewAdapter extends FirestoreRecyclerAdapter<AudioFile,firestoreRecyclerVewAdapter.PostViewHolder> {\n    /**\n     * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link\n     * FirestoreRecyclerOptions} for configuration options.\n     *\n     * @param options\n     */\n    Context context;\n    public firestoreRecyclerVewAdapter(@NonNull FirestoreRecyclerOptions<AudioFile> options,Context context) {\n        super(options);\n        this.context=context;\n    }\n\n    @Override\n    protected void onBindViewHolder(@NonNull PostViewHolder holder, @SuppressLint(\"RecyclerView\") int position, @NonNull AudioFile model) {\n        //holder.userImage.setImageResource();\n        holder.title.setText(getSnapshots().getSnapshot(position).getId());\n        holder.userName.setText(getItem(position).getUserName());\n        holder.createdAt.setText(getItem(position).getDate());\n        Glide.with(context).load(getItem(position).getPhotoUrl()).into(holder.userImage);\n\n\n        holder.itemView.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                Log.d(\"LinearLayout\", \"RecyclerView Clicked id is \"+getItem(position));\n                Log.d(\"LinearLayout\", \"RecyclerView Clicked id is \"+getItem(position).getUserName());\n                Log.d(\"LinearLayout\", \"RecyclerView Clicked id is \"+getSnapshots().getSnapshot(position).getId());\n\n//                MediaPlayer mp=new MediaPlayer();\n//                try {\n//                    //mp.setDataSource(\"https://firebasestorage.googleapis.com/v0/b/project-for-mc.appspot.com/o/Aduio%2Ffavourite%20song1647518773673.mp3?alt=media&token=3e2a6e9a-1868-4495-b169-af15409ab10f\");\n//                    mp.setDataSource(getItem(position).getDownloadUrl());\n//                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {\n//                        @Override\n//                        public void onPrepared(MediaPlayer mediaPlayer) {\n//                            mediaPlayer.start();\n//                        }\n//                    });\n//                    mp.prepare();\n//                } catch (IOException e) {\n//                    e.printStackTrace();\n//                }\n\n                Intent intent =new Intent(context, MusicPlayerActivity.class);\n                //intent.putExtra(\"postion\",position);\n                intent.putExtra(\"downloadLink\",getItem(position).getDownloadUrl());\n                intent.putExtra(\"songName\",getSnapshots().getSnapshot(position).getId());\n                context.startActivity(intent);\n\n\n//                storage storageInstance=storage.getStorageInstance();\n//                if(storageInstance != null){\n//                    storageInstance.playAudioUsingMediaPlayer(position);\n//                }\n            }\n        });\n    }\n\n    @NonNull\n    @Override\n    public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {\n        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_post,parent,false);\n        PostViewHolder postViewHolder=new PostViewHolder(view);\n        return postViewHolder;\n    }\n\n    public class PostViewHolder extends RecyclerView.ViewHolder{\n        private ImageView userImage;\n        private TextView title;\n        private TextView userName;\n        private TextView createdAt;\n        public PostViewHolder(@NonNull View itemView) {\n            super(itemView);\n            userImage=itemView.findViewById(R.id.userImage);\n            title=itemView.findViewById(R.id.postTitle);\n            userName=itemView.findViewById(R.id.userName);\n            createdAt=itemView.findViewById(R.id.createdAt);\n        }\n    }\n}\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/firebase_google_login/firestoreRecyclerVewAdapter.java b/app/src/main/java/com/example/firebase_google_login/firestoreRecyclerVewAdapter.java
+--- a/app/src/main/java/com/example/firebase_google_login/firestoreRecyclerVewAdapter.java	(revision eafb5aa04371616a214d38567e16f829d6fb0ab3)
++++ b/app/src/main/java/com/example/firebase_google_login/firestoreRecyclerVewAdapter.java	(date 1652420507066)
+@@ -68,6 +68,8 @@
+                 //intent.putExtra("postion",position);
+                 intent.putExtra("downloadLink",getItem(position).getDownloadUrl());
+                 intent.putExtra("songName",getSnapshots().getSnapshot(position).getId());
++                intent.putExtra("imageUrl",getItem(position).getUploadedImageUrl());
++                intent.putExtra("quote",getItem(position).getUploadedImageUrl());
+                 context.startActivity(intent);
+ 
+ 
+Index: app/src/main/java/com/example/firebase_google_login/storage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.firebase_google_login;\n\n\n\nimport androidx.annotation.NonNull;\nimport androidx.annotation.Nullable;\nimport androidx.appcompat.app.AppCompatActivity;\nimport androidx.recyclerview.widget.LinearLayoutManager;\nimport androidx.recyclerview.widget.RecyclerView;\n\nimport android.app.Activity;\nimport android.app.ProgressDialog;\nimport android.content.Context;\nimport android.content.Intent;\nimport android.database.Cursor;\nimport android.net.Uri;\nimport android.os.Bundle;\nimport android.provider.OpenableColumns;\nimport android.util.Log;\nimport android.view.Menu;\nimport android.view.MenuInflater;\nimport android.view.MenuItem;\nimport android.view.View;\nimport android.widget.Button;\nimport android.widget.EditText;\nimport android.widget.Toast;\n\nimport com.example.jean.jcplayer.model.JcAudio;\nimport com.example.jean.jcplayer.view.JcPlayerView;\nimport com.firebase.ui.firestore.FirestoreRecyclerOptions;\nimport com.google.android.gms.tasks.OnCompleteListener;\nimport com.google.android.gms.tasks.OnFailureListener;\nimport com.google.android.gms.tasks.OnSuccessListener;\nimport com.google.android.gms.tasks.Task;\nimport com.google.firebase.auth.FirebaseAuth;\nimport com.google.firebase.auth.FirebaseUser;\nimport com.google.firebase.firestore.EventListener;\nimport com.google.firebase.firestore.FirebaseFirestore;\nimport com.google.firebase.firestore.FirebaseFirestoreException;\nimport com.google.firebase.firestore.Query;\nimport com.google.firebase.firestore.QueryDocumentSnapshot;\nimport com.google.firebase.firestore.QuerySnapshot;\nimport com.google.firebase.storage.FirebaseStorage;\nimport com.google.firebase.storage.OnProgressListener;\nimport com.google.firebase.storage.StorageReference;\nimport com.google.firebase.storage.UploadTask;\n\nimport java.text.SimpleDateFormat;\nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.Date;\n\n\npublic class storage extends AppCompatActivity implements ExampleDialog.ExampleDialogListener {\n\n    private static final int PICK_AUDIO =123;\n    Button audioupload;\n    EditText audioName;\n    String audioNameText;\n    private firestoreRecyclerVewAdapter adapter;\n    String getLocationFromMap;\n    static long createdAt;\n\n    JcPlayerView jcplayerView;\n    ArrayList<JcAudio> jcAudios;\n    private static storage storageInstance;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_storage);\n\n//        audioupload=findViewById(R.id.uploadAudioButton);\n//        audioName=findViewById(R.id.audioName);\n\n        jcplayerView =  findViewById(R.id.jcplayer);\n        jcAudios = new ArrayList<>();\n        storageInstance=this;\n        double lat, lng;\n        String title;\n        Intent intent = this.getIntent();\n        lat = intent.getDoubleExtra(\"lat\", 38.8951);\n        lng = intent.getDoubleExtra(\"lng\", -77.0364);\n        title = intent.getStringExtra(\"title\");\n\n        //getLocationFromMap=String.valueOf(lat) + \",\" + String.valueOf(lng) + \" \" + title;\n        getLocationFromMap=title;\n        Log.i(\"storage activity\",\"current location = \"+getLocationFromMap);\n\n       // getLocationFromMap=\"38.8951,-77.0364\";\n        if(lat == 38.8951 && lng == -77.0364){\n            getLocationFromMap=\"38.8951,-77.0364\";\n        }\n\n        FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();\n        FirestoreRecyclerOptions<AudioFile> options = new FirestoreRecyclerOptions.Builder<AudioFile>()\n                .setQuery(firebaseFirestore.collection(getLocationFromMap), AudioFile.class)\n                .build();\n        //.orderBy(\"createdAt\", Query.Direction.DESCENDING)\n        RecyclerView recyclerView=findViewById(R.id.recyclerView);\n        recyclerView.setLayoutManager(new CustomLinearLayoutManager(this));\n        adapter=new firestoreRecyclerVewAdapter(options,this);\n        recyclerView.setAdapter(adapter);\n\n//        FirebaseFirestore.getInstance().collection(getLocationFromMap).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {\n//            @Override\n//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {\n//                //ArrayList<MusicPlayerSorting> tempArr=new ArrayList<>();\n//                for(QueryDocumentSnapshot documentSnapshot:queryDocumentSnapshots){\n//                    String songName=documentSnapshot.getId();\n//                    AudioFile audioFile=documentSnapshot.toObject(AudioFile.class);\n//                    jcAudios.add(JcAudio.createFromURL(songName,audioFile.getDownloadUrl()));\n//                    Log.i(\"AllMusic\",songName);\n//                    //tempArr.add(new MusicPlayerSorting(songName,audioFile));\n//                }\n////                Collections.sort(tempArr);\n////                for(int i=0;i<tempArr.size();i++){\n////                    jcAudios.add(JcAudio.createFromURL(tempArr.get(i).songName,tempArr.get(i).audioFile.getDownloadUrl()));\n////                    Log.i(\"AllMusic\",tempArr.get(i).songName);\n////                }\n//                jcplayerView.initPlaylist(jcAudios, null);\n//\n//            }\n//        });\n\n//        FirebaseFirestore.getInstance().collection(getLocationFromMap).addSnapshotListener(this, new EventListener<QuerySnapshot>() {\n//            @Override\n//            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {\n//                if(error==null) {\n//                    jcAudios = new ArrayList<>();\n//                    for (QueryDocumentSnapshot documentSnapshot : value) {\n//                        String songName = documentSnapshot.getId();\n//                        AudioFile audioFile = documentSnapshot.toObject(AudioFile.class);\n//                        jcAudios.add(JcAudio.createFromURL(songName, audioFile.getDownloadUrl()));\n//                        Log.i(\"realTimeMusic\",songName);\n//                    }\n//                    jcplayerView.initPlaylist(jcAudios, null);\n//                }\n//                //Log.i(\"realTimeMusic\",\"error.toString()\");\n//            }\n//        });\n\n        getRealTimeSongs();\n    }\n    private void getRealTimeSongs(){\n        FirebaseFirestore.getInstance().collection(getLocationFromMap).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {\n            @Override\n            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {\n                //ArrayList<MusicPlayerSorting> tempArr=new ArrayList<>();\n                jcAudios = new ArrayList<>();\n                for(QueryDocumentSnapshot documentSnapshot:queryDocumentSnapshots){\n                    String songName=documentSnapshot.getId();\n                    AudioFile audioFile=documentSnapshot.toObject(AudioFile.class);\n                    jcAudios.add(JcAudio.createFromURL(songName,audioFile.getDownloadUrl()));\n                    Log.i(\"AllMusic\",songName);\n                    //tempArr.add(new MusicPlayerSorting(songName,audioFile));\n                }\n//                Collections.sort(tempArr);\n//                for(int i=0;i<tempArr.size();i++){\n//                    jcAudios.add(JcAudio.createFromURL(tempArr.get(i).songName,tempArr.get(i).audioFile.getDownloadUrl()));\n//                    Log.i(\"AllMusic\",tempArr.get(i).songName);\n//                }\n                if(jcAudios.size()>0) {\n                    jcplayerView.initPlaylist(jcAudios, null);\n                }\n\n            }\n        });\n    }\n\n    public void playAudioUsingMediaPlayer(int position){\n        //final int position1=position;\n        if(position<jcAudios.size()) {\n            Log.d(\"MusicNumber\", position + \"\");\n            jcplayerView.playAudio(jcAudios.get(position));\n            jcplayerView.createNotification();\n        }\n        //position=Integer.MAX_VALUE;\n\n    }\n    public static storage getStorageInstance(){\n        return storageInstance;\n    }\n\n    @Override\n    protected void onStart() {\n        super.onStart();\n        adapter.startListening();\n    }\n\n    @Override\n    protected void onStop() {\n        super.onStop();\n        adapter.stopListening();\n    }\n\n    @Override\n    public void applyTexts(String username, String password) {\n\n    }\n\n    private class CustomLinearLayoutManager extends LinearLayoutManager {\n\n        public CustomLinearLayoutManager(Context context) {\n            super(context);\n        }\n        @Override\n        public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {\n            try {\n                super.onLayoutChildren(recycler, state);\n            } catch (IndexOutOfBoundsException e) {\n                Log.e(\"LinearLayout\", \"LinearLayout exception in RecyclerView\");\n            }\n        }\n    }\n\n\n\n\n\n    public static void uploadAudioFile(Activity activity){\n        //audioNameText=audioName.getText().toString().trim();\n        //createdAt=System.currentTimeMillis();\n        //if(audioNameText.length()>0) {\n            //audioNameText+=\"-\"+createdAt;\n        createdAt=System.currentTimeMillis();\n            Intent intent = new Intent();\n            intent.setType(\"audio/*\");\n            intent.setAction(Intent.ACTION_GET_CONTENT);\n            activity.startActivityForResult(Intent.createChooser(intent, \"Select Audio\"), PICK_AUDIO);\n//            audioName.setText(\"\");\n//        }\n//        else{\n//            Toast.makeText(this, \"Give Audio a Name\", Toast.LENGTH_SHORT).show();\n//        }\n    }\n    @Override\n    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {\n        super.onActivityResult(requestCode, resultCode, data);\n        if(requestCode==PICK_AUDIO){\n            if(resultCode==RESULT_OK){\n                Uri audioUri=data.getData();\n\n\n                Cursor mcursor = getApplicationContext().getContentResolver().query(audioUri,null,null,null,null);\n                int indexedname = mcursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);\n                mcursor.moveToFirst();\n                String songName = mcursor.getString(indexedname)+\" - \"+createdAt;\n                mcursor.close();\n                final ProgressDialog progressDialog = new ProgressDialog(this);\n                progressDialog.show();\n\n\n                Toast.makeText(this, \"Audio select\", Toast.LENGTH_SHORT).show();\n                StorageReference storageReference= FirebaseStorage.getInstance().getReference().child(\"Aduio\").child(songName+\".mp3\");\n                storageReference.putFile(audioUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {\n                    @Override\n                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {\n                        FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();\n                        if(firebaseUser!=null) {\n                        String userName=firebaseUser.getDisplayName();\n                        String photoUrl=firebaseUser.getPhotoUrl().toString();\n                        String userUid=firebaseUser.getUid();\n\n\n                        storageReference.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {\n                            @Override\n                            public void onComplete(@NonNull Task<Uri> task) {\n                                String audioUrl=task.getResult().toString();\n\n                                SimpleDateFormat sdf = new SimpleDateFormat(\"MMM dd,yyyy HH:mm\");\n                                Date resultdate = new Date(createdAt);\n                                String date=(sdf.format(resultdate));\n\n                                AudioFile audioFile = new AudioFile(userName,photoUrl,userUid,100,audioUrl,createdAt,date);\n                                //String getLocationFromMap=\"38.8951,-77.0364\";\n                                audioFile.uploadAudioFile(getLocationFromMap,songName,audioFile);\n\n                                AudioFile tempAudioFile=new AudioFile(getLocationFromMap,photoUrl,userUid,100,audioUrl,createdAt,date);\n                                tempAudioFile.uploadUserData(userUid,songName,tempAudioFile);\n\n                                Toast.makeText(storage.this, \"audio uploaded to Firestore\", Toast.LENGTH_SHORT).show();\n                                Log.i(\"URL\",audioUrl);\n                                progressDialog.dismiss();\n                                getRealTimeSongs();\n                            }\n                        }).addOnFailureListener(new OnFailureListener() {\n                            @Override\n                            public void onFailure(@NonNull Exception e) {\n                                //progressBar.setVisibility(View.GONE);\n                                Toast.makeText(storage.this, e.getMessage(), Toast.LENGTH_SHORT).show();\n                                progressDialog.dismiss();\n                            }\n                        });\n                       }\n                    }\n                }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {\n                    @Override\n                    public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {\n                        double progres = (100.0*snapshot.getBytesTransferred())/snapshot.getTotalByteCount();\n                        int currentProgress = (int)progres;\n                        progressDialog.setMessage(\"Uploaded: \"+currentProgress+\"%\");\n                    }\n                });\n\n            }\n        }\n    }\n\n    @Override\n    public boolean onCreateOptionsMenu(Menu menu) {\n        MenuInflater inflater=getMenuInflater();\n        inflater.inflate(R.menu.upload_icon,menu);\n        return super.onCreateOptionsMenu(menu);\n    }\n\n    @Override\n    public boolean onOptionsItemSelected(@NonNull MenuItem item) {\n        if(item.getItemId()==R.id.uploadMenuIcon){\n            openDialog();\n        }\n        return super.onOptionsItemSelected(item);\n    }\n    public void openDialog() {\n        ExampleDialog exampleDialog = new ExampleDialog();\n        exampleDialog.show(getSupportFragmentManager(), \"example dialog\");\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/firebase_google_login/storage.java b/app/src/main/java/com/example/firebase_google_login/storage.java
+--- a/app/src/main/java/com/example/firebase_google_login/storage.java	(revision eafb5aa04371616a214d38567e16f829d6fb0ab3)
++++ b/app/src/main/java/com/example/firebase_google_login/storage.java	(date 1652420507067)
+@@ -1,13 +1,6 @@
+ package com.example.firebase_google_login;
+ 
+ 
+-
+-import androidx.annotation.NonNull;
+-import androidx.annotation.Nullable;
+-import androidx.appcompat.app.AppCompatActivity;
+-import androidx.recyclerview.widget.LinearLayoutManager;
+-import androidx.recyclerview.widget.RecyclerView;
+-
+ import android.app.Activity;
+ import android.app.ProgressDialog;
+ import android.content.Context;
+@@ -20,11 +13,16 @@
+ import android.view.Menu;
+ import android.view.MenuInflater;
+ import android.view.MenuItem;
+-import android.view.View;
+ import android.widget.Button;
+ import android.widget.EditText;
+ import android.widget.Toast;
+ 
++import androidx.annotation.NonNull;
++import androidx.annotation.Nullable;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
++
+ import com.example.jean.jcplayer.model.JcAudio;
+ import com.example.jean.jcplayer.view.JcPlayerView;
+ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+@@ -34,10 +32,7 @@
+ import com.google.android.gms.tasks.Task;
+ import com.google.firebase.auth.FirebaseAuth;
+ import com.google.firebase.auth.FirebaseUser;
+-import com.google.firebase.firestore.EventListener;
+ import com.google.firebase.firestore.FirebaseFirestore;
+-import com.google.firebase.firestore.FirebaseFirestoreException;
+-import com.google.firebase.firestore.Query;
+ import com.google.firebase.firestore.QueryDocumentSnapshot;
+ import com.google.firebase.firestore.QuerySnapshot;
+ import com.google.firebase.storage.FirebaseStorage;
+@@ -47,23 +42,42 @@
+ 
+ import java.text.SimpleDateFormat;
+ import java.util.ArrayList;
+-import java.util.Collections;
+ import java.util.Date;
+ 
+ 
+ public class storage extends AppCompatActivity implements ExampleDialog.ExampleDialogListener {
+ 
+-    private static final int PICK_AUDIO =123;
++    private static final int PICK_AUDIO = 123;
++    static long createdAt;
++    private static storage storageInstance;
+     Button audioupload;
+     EditText audioName;
+     String audioNameText;
+-    private firestoreRecyclerVewAdapter adapter;
+     String getLocationFromMap;
+-    static long createdAt;
+-
+     JcPlayerView jcplayerView;
+     ArrayList<JcAudio> jcAudios;
+-    private static storage storageInstance;
++    private firestoreRecyclerVewAdapter adapter;
++
++    public static storage getStorageInstance() {
++        return storageInstance;
++    }
++
++    public static void uploadAudioFile(Activity activity) {
++        //audioNameText=audioName.getText().toString().trim();
++        //createdAt=System.currentTimeMillis();
++        //if(audioNameText.length()>0) {
++        //audioNameText+="-"+createdAt;
++        createdAt = System.currentTimeMillis();
++        Intent intent = new Intent();
++        intent.setType("audio/*");
++        intent.setAction(Intent.ACTION_GET_CONTENT);
++        activity.startActivityForResult(Intent.createChooser(intent, "Select Audio"), PICK_AUDIO);
++//            audioName.setText("");
++//        }
++//        else{
++//            Toast.makeText(this, "Give Audio a Name", Toast.LENGTH_SHORT).show();
++//        }
++    }
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+@@ -73,9 +87,9 @@
+ //        audioupload=findViewById(R.id.uploadAudioButton);
+ //        audioName=findViewById(R.id.audioName);
+ 
+-        jcplayerView =  findViewById(R.id.jcplayer);
++        jcplayerView = findViewById(R.id.jcplayer);
+         jcAudios = new ArrayList<>();
+-        storageInstance=this;
++        storageInstance = this;
+         double lat, lng;
+         String title;
+         Intent intent = this.getIntent();
+@@ -84,22 +98,22 @@
+         title = intent.getStringExtra("title");
+ 
+         //getLocationFromMap=String.valueOf(lat) + "," + String.valueOf(lng) + " " + title;
+-        getLocationFromMap=title;
+-        Log.i("storage activity","current location = "+getLocationFromMap);
++        getLocationFromMap = title;
++        Log.i("storage activity", "current location = " + getLocationFromMap);
+ 
+-       // getLocationFromMap="38.8951,-77.0364";
+-        if(lat == 38.8951 && lng == -77.0364){
+-            getLocationFromMap="38.8951,-77.0364";
++        // getLocationFromMap="38.8951,-77.0364";
++        if (lat == 38.8951 && lng == -77.0364) {
++            getLocationFromMap = "38.8951,-77.0364";
+         }
+ 
+-        FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
++        FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+         FirestoreRecyclerOptions<AudioFile> options = new FirestoreRecyclerOptions.Builder<AudioFile>()
+                 .setQuery(firebaseFirestore.collection(getLocationFromMap), AudioFile.class)
+                 .build();
+         //.orderBy("createdAt", Query.Direction.DESCENDING)
+-        RecyclerView recyclerView=findViewById(R.id.recyclerView);
++        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+         recyclerView.setLayoutManager(new CustomLinearLayoutManager(this));
+-        adapter=new firestoreRecyclerVewAdapter(options,this);
++        adapter = new firestoreRecyclerVewAdapter(options, this);
+         recyclerView.setAdapter(adapter);
+ 
+ //        FirebaseFirestore.getInstance().collection(getLocationFromMap).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+@@ -142,17 +156,18 @@
+ 
+         getRealTimeSongs();
+     }
+-    private void getRealTimeSongs(){
++
++    public void getRealTimeSongs() {
+         FirebaseFirestore.getInstance().collection(getLocationFromMap).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+             @Override
+             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                 //ArrayList<MusicPlayerSorting> tempArr=new ArrayList<>();
+                 jcAudios = new ArrayList<>();
+-                for(QueryDocumentSnapshot documentSnapshot:queryDocumentSnapshots){
+-                    String songName=documentSnapshot.getId();
+-                    AudioFile audioFile=documentSnapshot.toObject(AudioFile.class);
+-                    jcAudios.add(JcAudio.createFromURL(songName,audioFile.getDownloadUrl()));
+-                    Log.i("AllMusic",songName);
++                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
++                    String songName = documentSnapshot.getId();
++                    AudioFile audioFile = documentSnapshot.toObject(AudioFile.class);
++                    jcAudios.add(JcAudio.createFromURL(songName, audioFile.getDownloadUrl()));
++                    Log.i("AllMusic", songName);
+                     //tempArr.add(new MusicPlayerSorting(songName,audioFile));
+                 }
+ //                Collections.sort(tempArr);
+@@ -160,7 +175,7 @@
+ //                    jcAudios.add(JcAudio.createFromURL(tempArr.get(i).songName,tempArr.get(i).audioFile.getDownloadUrl()));
+ //                    Log.i("AllMusic",tempArr.get(i).songName);
+ //                }
+-                if(jcAudios.size()>0) {
++                if (jcAudios.size() > 0) {
+                     jcplayerView.initPlaylist(jcAudios, null);
+                 }
+ 
+@@ -168,9 +183,9 @@
+         });
+     }
+ 
+-    public void playAudioUsingMediaPlayer(int position){
++    public void playAudioUsingMediaPlayer(int position) {
+         //final int position1=position;
+-        if(position<jcAudios.size()) {
++        if (position < jcAudios.size()) {
+             Log.d("MusicNumber", position + "");
+             jcplayerView.playAudio(jcAudios.get(position));
+             jcplayerView.createNotification();
+@@ -178,9 +193,6 @@
+         //position=Integer.MAX_VALUE;
+ 
+     }
+-    public static storage getStorageInstance(){
+-        return storageInstance;
+-    }
+ 
+     @Override
+     protected void onStart() {
+@@ -199,107 +211,72 @@
+ 
+     }
+ 
+-    private class CustomLinearLayoutManager extends LinearLayoutManager {
+-
+-        public CustomLinearLayoutManager(Context context) {
+-            super(context);
+-        }
+-        @Override
+-        public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
+-            try {
+-                super.onLayoutChildren(recycler, state);
+-            } catch (IndexOutOfBoundsException e) {
+-                Log.e("LinearLayout", "LinearLayout exception in RecyclerView");
+-            }
+-        }
+-    }
+-
+-
+-
+-
+-
+-    public static void uploadAudioFile(Activity activity){
+-        //audioNameText=audioName.getText().toString().trim();
+-        //createdAt=System.currentTimeMillis();
+-        //if(audioNameText.length()>0) {
+-            //audioNameText+="-"+createdAt;
+-        createdAt=System.currentTimeMillis();
+-            Intent intent = new Intent();
+-            intent.setType("audio/*");
+-            intent.setAction(Intent.ACTION_GET_CONTENT);
+-            activity.startActivityForResult(Intent.createChooser(intent, "Select Audio"), PICK_AUDIO);
+-//            audioName.setText("");
+-//        }
+-//        else{
+-//            Toast.makeText(this, "Give Audio a Name", Toast.LENGTH_SHORT).show();
+-//        }
+-    }
+     @Override
+     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+         super.onActivityResult(requestCode, resultCode, data);
+-        if(requestCode==PICK_AUDIO){
+-            if(resultCode==RESULT_OK){
+-                Uri audioUri=data.getData();
++        if (requestCode == PICK_AUDIO) {
++            if (resultCode == RESULT_OK) {
++                Uri audioUri = data.getData();
+ 
+ 
+-                Cursor mcursor = getApplicationContext().getContentResolver().query(audioUri,null,null,null,null);
++                Cursor mcursor = getApplicationContext().getContentResolver().query(audioUri, null, null, null, null);
+                 int indexedname = mcursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
+                 mcursor.moveToFirst();
+-                String songName = mcursor.getString(indexedname)+" - "+createdAt;
++                String songName = mcursor.getString(indexedname) + " - " + createdAt;
+                 mcursor.close();
+                 final ProgressDialog progressDialog = new ProgressDialog(this);
+                 progressDialog.show();
+ 
+ 
+                 Toast.makeText(this, "Audio select", Toast.LENGTH_SHORT).show();
+-                StorageReference storageReference= FirebaseStorage.getInstance().getReference().child("Aduio").child(songName+".mp3");
++                StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Aduio").child(songName + ".mp3");
+                 storageReference.putFile(audioUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                     @Override
+                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+-                        FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
+-                        if(firebaseUser!=null) {
+-                        String userName=firebaseUser.getDisplayName();
+-                        String photoUrl=firebaseUser.getPhotoUrl().toString();
+-                        String userUid=firebaseUser.getUid();
++                        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
++                        if (firebaseUser != null) {
++                            String userName = firebaseUser.getDisplayName();
++                            String photoUrl = firebaseUser.getPhotoUrl().toString();
++                            String userUid = firebaseUser.getUid();
+ 
+ 
+-                        storageReference.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+-                            @Override
+-                            public void onComplete(@NonNull Task<Uri> task) {
+-                                String audioUrl=task.getResult().toString();
++                            storageReference.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
++                                @Override
++                                public void onComplete(@NonNull Task<Uri> task) {
++                                    String audioUrl = task.getResult().toString();
+ 
+-                                SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");
+-                                Date resultdate = new Date(createdAt);
+-                                String date=(sdf.format(resultdate));
++                                    SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");
++                                    Date resultdate = new Date(createdAt);
++                                    String date = (sdf.format(resultdate));
+ 
+-                                AudioFile audioFile = new AudioFile(userName,photoUrl,userUid,100,audioUrl,createdAt,date);
+-                                //String getLocationFromMap="38.8951,-77.0364";
+-                                audioFile.uploadAudioFile(getLocationFromMap,songName,audioFile);
++                                    AudioFile audioFile = new AudioFile(userName, photoUrl, userUid, 100, audioUrl, createdAt, date,"","");
++                                    //String getLocationFromMap="38.8951,-77.0364";
++                                    audioFile.uploadAudioFile(getLocationFromMap, songName, audioFile);
+ 
+-                                AudioFile tempAudioFile=new AudioFile(getLocationFromMap,photoUrl,userUid,100,audioUrl,createdAt,date);
+-                                tempAudioFile.uploadUserData(userUid,songName,tempAudioFile);
++                                    AudioFile tempAudioFile = new AudioFile(getLocationFromMap, photoUrl, userUid, 100, audioUrl, createdAt, date,"","");
++                                    tempAudioFile.uploadUserData(userUid, songName, tempAudioFile);
+ 
+-                                Toast.makeText(storage.this, "audio uploaded to Firestore", Toast.LENGTH_SHORT).show();
+-                                Log.i("URL",audioUrl);
+-                                progressDialog.dismiss();
+-                                getRealTimeSongs();
+-                            }
+-                        }).addOnFailureListener(new OnFailureListener() {
+-                            @Override
+-                            public void onFailure(@NonNull Exception e) {
+-                                //progressBar.setVisibility(View.GONE);
+-                                Toast.makeText(storage.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+-                                progressDialog.dismiss();
+-                            }
+-                        });
+-                       }
++                                    Toast.makeText(storage.this, "audio uploaded to Firestore", Toast.LENGTH_SHORT).show();
++                                    Log.i("URL", audioUrl);
++                                    progressDialog.dismiss();
++                                    getRealTimeSongs();
++                                }
++                            }).addOnFailureListener(new OnFailureListener() {
++                                @Override
++                                public void onFailure(@NonNull Exception e) {
++                                    //progressBar.setVisibility(View.GONE);
++                                    Toast.makeText(storage.this, e.getMessage(), Toast.LENGTH_SHORT).show();
++                                    progressDialog.dismiss();
++                                }
++                            });
++                        }
+                     }
+                 }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                     @Override
+                     public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+-                        double progres = (100.0*snapshot.getBytesTransferred())/snapshot.getTotalByteCount();
+-                        int currentProgress = (int)progres;
+-                        progressDialog.setMessage("Uploaded: "+currentProgress+"%");
++                        double progres = (100.0 * snapshot.getBytesTransferred()) / snapshot.getTotalByteCount();
++                        int currentProgress = (int) progres;
++                        progressDialog.setMessage("Uploaded: " + currentProgress + "%");
+                     }
+                 });
+ 
+@@ -309,20 +286,38 @@
+ 
+     @Override
+     public boolean onCreateOptionsMenu(Menu menu) {
+-        MenuInflater inflater=getMenuInflater();
+-        inflater.inflate(R.menu.upload_icon,menu);
++        MenuInflater inflater = getMenuInflater();
++        inflater.inflate(R.menu.upload_icon, menu);
+         return super.onCreateOptionsMenu(menu);
+     }
+ 
+     @Override
+     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+-        if(item.getItemId()==R.id.uploadMenuIcon){
++        if (item.getItemId() == R.id.uploadMenuIcon) {
+             openDialog();
++//            uploadAudioFile(this);
+         }
+         return super.onOptionsItemSelected(item);
+     }
++
+     public void openDialog() {
+         ExampleDialog exampleDialog = new ExampleDialog();
+         exampleDialog.show(getSupportFragmentManager(), "example dialog");
+     }
++
++    private class CustomLinearLayoutManager extends LinearLayoutManager {
++
++        public CustomLinearLayoutManager(Context context) {
++            super(context);
++        }
++
++        @Override
++        public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
++            try {
++                super.onLayoutChildren(recycler, state);
++            } catch (IndexOutOfBoundsException e) {
++                Log.e("LinearLayout", "LinearLayout exception in RecyclerView");
++            }
++        }
++    }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/firebase_google_login/AudioFile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.firebase_google_login;\n\nimport com.google.firebase.firestore.FirebaseFirestore;\n\npublic class AudioFile implements Comparable{\n    private String userName;\n    private String photoUrl;\n    private String userUid;\n    private long views;\n    private String downloadUrl;\n    private long createdAt;\n    private String date;\n    private FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();\n\n\n\n    public AudioFile(){\n\n    }\n\n\n    public AudioFile(String userName, String photoUrl, String userUid, long views, String downloadUrl,long createdAt,String date){\n        this.userName=userName;\n        this.photoUrl=photoUrl;\n        this.userUid=userUid;\n        this.views=views;\n        this.downloadUrl=downloadUrl;\n        this.createdAt=createdAt;\n        this.date=date;\n    }\n\n    public String getUserName() {\n        return userName;\n    }\n\n    public String getPhotoUrl() {\n        return photoUrl;\n    }\n\n    public String getUserUid() {\n        return userUid;\n    }\n\n    public long getViews() {\n        return views;\n    }\n\n    public String getDownloadUrl() {\n        return downloadUrl;\n    }\n\n    public long getCreatedAt() {\n        return createdAt;\n    }\n\n    public String getDate() {\n        return date;\n    }\n\n    public void uploadAudioFile(String location,String audioFileName,AudioFile audioFile){\n        //FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();\n        firebaseFirestore.collection(location).document(audioFileName).set(audioFile);\n    }\n\n    public void uploadUserData(String userUID,String audioFileName, AudioFile audioFile){\n        firebaseFirestore.collection(userUID).document(audioFileName).set(audioFile);\n    }\n\n    @Override\n    public int compareTo(Object o) {\n        AudioFile o1=(AudioFile) o;\n        if(this.createdAt>o1.createdAt){\n            return 1;\n        }\n        else if(this.createdAt<o1.createdAt){\n            return -1;\n        }\n        return 0;\n    }\n}\n\nclass MusicPlayerSorting implements Comparable{\n    String songName;\n    AudioFile audioFile;\n\n    public MusicPlayerSorting(String songName, AudioFile audioFile) {\n        this.songName = songName;\n        this.audioFile = audioFile;\n    }\n\n    @Override\n    public int compareTo(Object o) {\n        MusicPlayerSorting o1=(MusicPlayerSorting) o;\n        if(this.audioFile.getCreatedAt()>o1.audioFile.getCreatedAt()){\n            return 1;\n        }\n        else if(this.audioFile.getCreatedAt()<o1.audioFile.getCreatedAt()){\n            return -1;\n        }\n        return 0;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/firebase_google_login/AudioFile.java b/app/src/main/java/com/example/firebase_google_login/AudioFile.java
+--- a/app/src/main/java/com/example/firebase_google_login/AudioFile.java	(revision eafb5aa04371616a214d38567e16f829d6fb0ab3)
++++ b/app/src/main/java/com/example/firebase_google_login/AudioFile.java	(date 1652420507066)
+@@ -10,6 +10,8 @@
+     private String downloadUrl;
+     private long createdAt;
+     private String date;
++    private String uploadedImageUrl;
++    private String quote;
+     private FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
+ 
+ 
+@@ -19,7 +21,7 @@
+     }
+ 
+ 
+-    public AudioFile(String userName, String photoUrl, String userUid, long views, String downloadUrl,long createdAt,String date){
++    public AudioFile(String userName, String photoUrl, String userUid, long views, String downloadUrl,long createdAt,String date,String uploadedImageUrl,String quote){
+         this.userName=userName;
+         this.photoUrl=photoUrl;
+         this.userUid=userUid;
+@@ -27,6 +29,8 @@
+         this.downloadUrl=downloadUrl;
+         this.createdAt=createdAt;
+         this.date=date;
++        this.uploadedImageUrl=uploadedImageUrl;
++        this.quote=quote;
+     }
+ 
+     public String getUserName() {
+@@ -57,7 +61,15 @@
+         return date;
+     }
+ 
+-    public void uploadAudioFile(String location,String audioFileName,AudioFile audioFile){
++    public String getUploadedImageUrl() {
++        return uploadedImageUrl;
++    }
++
++    public String getQuote() {
++        return quote;
++    }
++
++    public void uploadAudioFile(String location, String audioFileName, AudioFile audioFile){
+         //FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
+         firebaseFirestore.collection(location).document(audioFileName).set(audioFile);
+     }
