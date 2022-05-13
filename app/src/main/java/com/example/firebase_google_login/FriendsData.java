@@ -53,7 +53,7 @@ public class FriendsData extends AppCompatActivity {
 //        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         Bundle extra=getIntent().getExtras();
 
-        userUid=extra.getString("uid");
+        userUid=extra.getString("userUid");
 //        userUid = firebaseUser.getUid();
 
 
@@ -62,7 +62,7 @@ public class FriendsData extends AppCompatActivity {
         FirestoreRecyclerOptions<AudioFile> options = new FirestoreRecyclerOptions.Builder<AudioFile>()
                 .setQuery(firebaseFirestore.collection(userUid), AudioFile.class)
                 .build();
-        recyclerView.setLayoutManager(new CustomLinearLayoutManager(this));
+        recyclerView.setLayoutManager(new FriendsData.CustomLinearLayoutManager(this));
         adapter = new FriendDataFirestoreRecyclerVewAdapter(options, this);
         recyclerView.setAdapter(adapter);
 
