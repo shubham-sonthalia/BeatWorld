@@ -142,7 +142,7 @@ public class storage extends AppCompatActivity implements ExampleDialog.ExampleD
 
         getRealTimeSongs();
     }
-    private void getRealTimeSongs(){
+    public void getRealTimeSongs(){
         FirebaseFirestore.getInstance().collection(getLocationFromMap).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -272,11 +272,11 @@ public class storage extends AppCompatActivity implements ExampleDialog.ExampleD
                                 Date resultdate = new Date(createdAt);
                                 String date=(sdf.format(resultdate));
 
-                                AudioFile audioFile = new AudioFile(userName,photoUrl,userUid,100,audioUrl,createdAt,date);
+                                AudioFile audioFile = new AudioFile(userName,photoUrl,userUid,100,audioUrl,createdAt,date, "", "");
                                 //String getLocationFromMap="38.8951,-77.0364";
                                 audioFile.uploadAudioFile(getLocationFromMap,songName,audioFile);
 
-                                AudioFile tempAudioFile=new AudioFile(getLocationFromMap,photoUrl,userUid,100,audioUrl,createdAt,date);
+                                AudioFile tempAudioFile=new AudioFile(getLocationFromMap,photoUrl,userUid,100,audioUrl,createdAt,date, "", "");
                                 tempAudioFile.uploadUserData(userUid,songName,tempAudioFile);
 
                                 Toast.makeText(storage.this, "audio uploaded to Firestore", Toast.LENGTH_SHORT).show();
