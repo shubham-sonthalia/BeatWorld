@@ -53,7 +53,7 @@ public class FriendsData extends AppCompatActivity {
 //        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         Bundle extra=getIntent().getExtras();
 
-        String userUid=extra.getString("userUid");
+        userUid=extra.getString("uid");
 //        userUid = firebaseUser.getUid();
 
 
