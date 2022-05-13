@@ -96,6 +96,7 @@ public class ProfileActivity extends AppCompatActivity implements ExampleDialog.
             hashMap.put("email",firebaseUser.getEmail());
             hashMap.put("username",firebaseUser.getDisplayName());
             hashMap.put("image",firebaseUser.getPhotoUrl().toString());
+            hashMap.put("uid",firebaseUser.getUid());
             mRef.child(firebaseUser.getDisplayName()).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener(){
                 @Override
                 public void onSuccess(Object o)

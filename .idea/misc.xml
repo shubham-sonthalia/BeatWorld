@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/lectures/8/MC/android_projects/BeatWorld2/app/src/main/res/layout/activity_maps.xml" value="0.27447916666666666" />
+        <entry key="..\:/lectures/8/MC/android_projects/BeatWorld2/app/src/main/res/layout/activity_music_player.xml" value="0.27447916666666666" />
+        <entry key="..\:/lectures/8/MC/android_projects/BeatWorld2/app/src/main/res/layout/activity_profile.xml" value="0.27025641025641023" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.2375" />
         <entry key="app/src/main/res/drawable/ic_liked.xml" value="0.2375" />
         <entry key="app/src/main/res/drawable/ic_unliked.xml" value="0.2375" />
@@ -15,12 +18,11 @@
         <entry key="app/src/main/res/layout/include_toolbar.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/item_post.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/item_post_for_user_data.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/layout_dialog.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/singlerow.xml" value="0.3098958333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -2,14 +2,15 @@ package com.example.firebase_google_login;
 
 public class model {
 
-    String email,username,image;
+    String email,username,image,uid;
 
     model(){}
 
-    public model(String email, String username,String image) {
+    public model(String email, String username, String image, String uid) {
         this.email = email;
         this.username = username;
         this.image = image;
+        this.uid = uid;
     }
 
     public String getEmail() {
@@ -34,5 +35,13 @@ public class model {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 }
