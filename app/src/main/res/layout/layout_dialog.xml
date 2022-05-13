@@ -2,59 +2,91 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     android:orientation="vertical"
     >
-    <LinearLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Image :                  "
-            android:textSize="20dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        android:text="Upload Selfie"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
         <Button
             android:id="@+id/upload_btn"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="0dp"
             android:background="@drawable/ic_baseline_image_24" />
+    </RelativeLayout>
 
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:padding="20dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
         <TextView
             android:id="@+id/textView2"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Music File :            "
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp"
+            android:text="Upload MP3"
+            android:textColor="@color/white"
             android:textSize="20dp" />
+
         <Button
             android:id="@+id/music_upload"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="0dp"
             android:background="@drawable/ic_baseline_cloud_upload_24" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:padding="20dp"
-        android:orientation="horizontal">
-
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor = "@color/white"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:text = "Upload memories"
+            />
         <EditText
             android:id="@+id/quote"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
             android:hint="Quote" />
 
     </LinearLayout>
-
-
-
 </LinearLayout>

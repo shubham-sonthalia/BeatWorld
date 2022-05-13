@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -21,13 +25,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
-        android:textColor="@color/white"/>
+        android:textColor="@color/green_spotify"/>
 
     <TextView
         style="@style/TextAppearance.MaterialComponents.Caption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="You are logged in as"
+        android:visibility="invisible"
         android:textColor="@color/grey"/>
 
     <TextView
@@ -36,60 +41,103 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
+        android:visibility="invisible"
         android:textColor="@color/grey"/>
-<!--    <ScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content">-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <Button
-            android:id="@+id/upload_btn"
-            android:layout_marginTop="20dp"
-            style="@style/TextAppearance.MaterialComponents.Headline6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Feed"
-            android:textColor="@color/white"
-            android:background="@color/green_spotify"/>
-        <Button
-            android:id="@+id/map"
-            android:layout_marginTop="10dp"
-            style="@style/TextAppearance.MaterialComponents.Headline6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Explore Places"
-            android:textColor="@color/white"
-            android:background="@color/green_spotify"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/upload_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/ic_baseline_search_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXPLORE FEED"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/green_spotify"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/map"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:textColor="@color/white"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/ic_baseline_map_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MAPS"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/green_spotify"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/explore_people"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/ic_baseline_people_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FIND FRIENDS"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/green_spotify"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="goToUserData"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/ic_baseline_featured_play_list_24" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MY FEED"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/green_spotify"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
         <Button
             android:id="@+id/logoutbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/ic_baseline_login_24" />
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@color/red"
-            android:text="Sign out"
-            android:textColor="@color/white" />
-        <Button
-            android:id="@+id/explore_people"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@color/red"
-            android:text="Explore People"
-            android:textColor="@color/white" />
-
+            android:text="LOG OUT"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/green_spotify"/>
+        </LinearLayout>
     </LinearLayout>
-
-<!--    <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:onClick="goToUserData"-->
-<!--        android:text="Go To UserData Activity"></Button>-->
-<!--    </ScrollView>-->
-
-
 </LinearLayout>
+</ScrollView>

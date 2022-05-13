@@ -15,10 +15,11 @@
         android:padding = "8dp">
         <Spinner
             android:layout_height="match_parent"
+            android:textColor = "@color/black"
             android:layout_width="0dp"
             android:layout_weight = "1"
             android:id = "@+id/sp_type"
-            android:background="@android:drawable/editbox_background"/>
+            />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

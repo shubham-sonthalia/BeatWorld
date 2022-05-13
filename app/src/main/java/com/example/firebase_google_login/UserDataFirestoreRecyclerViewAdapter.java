@@ -85,9 +85,6 @@ public class UserDataFirestoreRecyclerViewAdapter extends FirestoreRecyclerAdapt
                 Log.d("LinearLayout", "RecyclerView Clicked id is "+getItem(position));
                 Log.d("LinearLayout", "RecyclerView Clicked id is "+getItem(position).getUserName());
                 Log.d("LinearLayout", "RecyclerView Clicked id is "+getSnapshots().getSnapshot(position).getId());
-
-
-
                 UserData storageInstance=UserData.getUserDataInstance();
                 if(storageInstance != null){
                     storageInstance.playAudioUsingMediaPlayer(position);

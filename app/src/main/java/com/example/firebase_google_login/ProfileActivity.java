@@ -96,16 +96,17 @@ public class ProfileActivity extends AppCompatActivity implements ExampleDialog.
             hashMap.put("email",firebaseUser.getEmail());
             hashMap.put("username",firebaseUser.getDisplayName());
             hashMap.put("image",firebaseUser.getPhotoUrl().toString());
+            hashMap.put("uid",firebaseUser.getUid());
             mRef.child(firebaseUser.getDisplayName()).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener(){
                 @Override
                 public void onSuccess(Object o)
                 {
-                    Toast.makeText(ProfileActivity.this,"added to DB",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(ProfileActivity.this,"added to DB",Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(ProfileActivity.this,"error to DB",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(ProfileActivity.this,"error to DB",Toast.LENGTH_SHORT).show();
                 }
             });
         }

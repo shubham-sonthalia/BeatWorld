@@ -13,19 +13,19 @@
         android:id="@+id/icon"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="150dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
 
         android:src="@drawable/logo_256_black" />
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:textSize="20dp"
-    android:textColor="@color/white"
-    android:textAlignment="center"
-    android:text="A geospatial musical experience"
-    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="A geospatial musical experience"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googlesigninbtn"
