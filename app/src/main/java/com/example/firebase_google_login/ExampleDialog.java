@@ -61,6 +61,7 @@ public class ExampleDialog extends AppCompatDialogFragment {
 //                String selectedPath = getRealPathFromURI(selectedImageUri);
 //                tvStatus.setText("Selected Path :: " + selectedPath);
                 Log.i("imagePicker", " Path :: " + selectedImageUri);
+                createdAt = System.currentTimeMillis();
                 StorageReference storageReferenceImage = FirebaseStorage.getInstance().getReference().child("Images").child(createdAt + ".jpg");
                 storageReferenceImage.putFile(selectedImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override

@@ -1,0 +1,109 @@
+package com.example.firebase_google_login;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+
+//public class FriendDataFirestoreRecyclerVewAdapter {
+//}
+
+
+
+public class FriendDataFirestoreRecyclerVewAdapter extends FirestoreRecyclerAdapter<AudioFile,FriendDataFirestoreRecyclerVewAdapter.PostViewHolder> {
+    /**
+     * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
+     * FirestoreRecyclerOptions} for configuration options.
+     *
+     * @param options
+     */
+    Context context;
+    public FriendDataFirestoreRecyclerVewAdapter(@NonNull FirestoreRecyclerOptions<AudioFile> options, Context context) {
+        super(options);
+        this.context=context;
+    }
+
+    @Override
+    protected void onBindViewHolder(@NonNull PostViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull AudioFile model) {
+        //holder.userImage.setImageResource();
+        holder.title.setText(getSnapshots().getSnapshot(position).getId());
+        holder.userName.setText(getItem(position).getUserName());
+        holder.createdAt.setText(getItem(position).getDate());
+        Glide.with(context).load(getItem(position).getPhotoUrl()).into(holder.userImage);
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("LinearLayout", "RecyclerView Clicked id is "+getItem(position));
+                Log.d("LinearLayout", "RecyclerView Clicked id is "+getItem(position).getUserName());
+                Log.d("LinearLayout", "RecyclerView Clicked id is "+getSnapshots().getSnapshot(position).getId());
+
+//                MediaPlayer mp=new MediaPlayer();
+//                try {
+//                    //mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/project-for-mc.appspot.com/o/Aduio%2Ffavourite%20song1647518773673.mp3?alt=media&token=3e2a6e9a-1868-4495-b169-af15409ab10f");
+//                    mp.setDataSource(getItem(position).getDownloadUrl());
+//                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//                        @Override
+//                        public void onPrepared(MediaPlayer mediaPlayer) {
+//                            mediaPlayer.start();
+//                        }
+//                    });
+//                    mp.prepare();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+
+                Intent intent =new Intent(context, MusicPlayerActivity.class);
+                //intent.putExtra("postion",position);
+                intent.putExtra("downloadLink",getItem(position).getDownloadUrl());
+                intent.putExtra("songName",getSnapshots().getSnapshot(position).getId());
+                intent.putExtra("imageUrl",getItem(position).getUploadedImageUrl());
+                intent.putExtra("quote",getItem(position).getUploadedImageUrl());
+                context.startActivity(intent);
+
+
+//                storage storageInstance=storage.getStorageInstance();
+//                if(storageInstance != null){
+//                    storageInstance.playAudioUsingMediaPlayer(position);
+//                }
+            }
+        });
+    }
+
+    @NonNull
+    @Override
+    public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_post,parent,false);
+        PostViewHolder postViewHolder=new PostViewHolder(view);
+        return postViewHolder;
+    }
+
+    public class PostViewHolder extends RecyclerView.ViewHolder{
+        private ImageView userImage;
+        private TextView title;
+        private TextView userName;
+        private TextView createdAt;
+        public PostViewHolder(@NonNull View itemView) {
+            super(itemView);
+            userImage=itemView.findViewById(R.id.userImage);
+            title=itemView.findViewById(R.id.postTitle);
+            userName=itemView.findViewById(R.id.userName);
+            createdAt=itemView.findViewById(R.id.createdAt);
+        }
+    }
+}
+
+
