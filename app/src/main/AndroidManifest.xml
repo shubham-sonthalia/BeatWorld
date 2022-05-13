@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FireBase_Google_Login">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".MusicPlayerActivity"
             android:exported="false" />
         <activity
@@ -34,12 +37,10 @@
             android:exported="false" />
         <activity
             android:name=".find_frnds"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

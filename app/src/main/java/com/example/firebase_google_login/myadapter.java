@@ -1,5 +1,6 @@
 package com.example.firebase_google_login;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,16 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
         holder.username.setText(model.getUsername());
         holder.email.setText(model.getEmail());
         Glide.with(holder.img.getContext()).load(model.getImage()).into(holder.img);
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(),MainActivity2.class);
+                    intent.putExtra("uid",model.getUid());
+                    view.getContext().startActivity(intent);
+
+
+            }
+        });
     }
 
     @NonNull
@@ -43,12 +54,15 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
     {
         TextView username,email;
         CircleImageView img;
+        View view;
         public myviewholder(@NonNull View itemView)
         {
             super(itemView);
             username=(TextView)itemView.findViewById(R.id.usernametxt);
             email=(TextView)itemView.findViewById(R.id.emailtxt);
             img = (CircleImageView) itemView.findViewById(R.id.img1);
+            view = itemView;
         }
     }
+
 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -27,7 +28,7 @@ public class find_frnds extends AppCompatActivity {
         setContentView(R.layout.activity_find_frnds);
         mRef = FirebaseDatabase.getInstance().getReference().child("User");
         recview = (RecyclerView) findViewById(R.id.recview);
-        recview.setLayoutManager(new LinearLayoutManager(this));
+        recview.setLayoutManager(new CustomLinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options = new FirebaseRecyclerOptions.Builder<model>()
                 .setQuery(FirebaseDatabase.getInstance().getReference().child("User"),model.class)
@@ -37,7 +38,21 @@ public class find_frnds extends AppCompatActivity {
         recview.setAdapter(adapter );
 
     }
+    private class CustomLinearLayoutManager extends LinearLayoutManager {
 
+        public CustomLinearLayoutManager(Context context) {
+            super(context);
+        }
+
+        @Override
+        public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
+            try {
+                super.onLayoutChildren(recycler, state);
+            } catch (IndexOutOfBoundsException e) {
+                Log.e("LinearLayout", "LinearLayout exception in RecyclerView");
+            }
+        }
+    }
     @Override
     protected void onStart() {
         super.onStart();
