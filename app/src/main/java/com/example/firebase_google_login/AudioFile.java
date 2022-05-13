@@ -10,6 +10,8 @@ public class AudioFile implements Comparable{
     private String downloadUrl;
     private long createdAt;
     private String date;
+    private String uploadedImageUrl;
+    private String quote;
     private FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
 
 
@@ -19,7 +21,7 @@ public class AudioFile implements Comparable{
     }
 
 
-    public AudioFile(String userName, String photoUrl, String userUid, long views, String downloadUrl,long createdAt,String date){
+    public AudioFile(String userName, String photoUrl, String userUid, long views, String downloadUrl,long createdAt,String date,String uploadedImageUrl,String quote){
         this.userName=userName;
         this.photoUrl=photoUrl;
         this.userUid=userUid;
@@ -27,6 +29,8 @@ public class AudioFile implements Comparable{
         this.downloadUrl=downloadUrl;
         this.createdAt=createdAt;
         this.date=date;
+        this.uploadedImageUrl=uploadedImageUrl;
+        this.quote=quote;
     }
 
     public String getUserName() {
@@ -57,7 +61,15 @@ public class AudioFile implements Comparable{
         return date;
     }
 
-    public void uploadAudioFile(String location,String audioFileName,AudioFile audioFile){
+    public String getUploadedImageUrl() {
+        return uploadedImageUrl;
+    }
+
+    public String getQuote() {
+        return quote;
+    }
+
+    public void uploadAudioFile(String location, String audioFileName, AudioFile audioFile){
         //FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
         firebaseFirestore.collection(location).document(audioFileName).set(audioFile);
     }
