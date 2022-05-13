@@ -29,6 +29,9 @@ public class MusicPlayerActivity extends AppCompatActivity {
         Bundle extra=getIntent().getExtras();
 
         String quote=extra.getString("quote");
+        TextView quoteText=findViewById(R.id.musicArtistName);
+        quoteText.setText(quote);
+
 
         TextView songName=findViewById(R.id.musicTitle);
         songName.setText(extra.getString("songName"));

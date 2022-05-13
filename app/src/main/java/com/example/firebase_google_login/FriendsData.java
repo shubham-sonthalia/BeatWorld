@@ -43,7 +43,7 @@ public class FriendsData extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_data);
+        setContentView(R.layout.activity_friends_data);
 
         jcplayerView = findViewById(R.id.jcplayerForFriendsData);
         jcAudios = new ArrayList<>();

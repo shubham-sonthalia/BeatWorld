@@ -34,7 +34,7 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
             @Override
             public void onClick(View view) {
                     Intent intent = new Intent(view.getContext(),FriendsData.class);
-                    intent.putExtra("uid",model.getUid());
+                    intent.putExtra("userUid",model.getUid());
                     view.getContext().startActivity(intent);
 
 
