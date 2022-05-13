@@ -101,12 +101,12 @@ public class ProfileActivity extends AppCompatActivity implements ExampleDialog.
                 @Override
                 public void onSuccess(Object o)
                 {
-                    Toast.makeText(ProfileActivity.this,"added to DB",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(ProfileActivity.this,"added to DB",Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(ProfileActivity.this,"error to DB",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(ProfileActivity.this,"error to DB",Toast.LENGTH_SHORT).show();
                 }
             });
         }
