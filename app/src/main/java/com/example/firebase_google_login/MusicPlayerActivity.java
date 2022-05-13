@@ -24,14 +24,6 @@ public class MusicPlayerActivity extends AppCompatActivity {
 
 
         Bundle extra=getIntent().getExtras();
-//        int position=extra.getInt("position");
-
-//        storage storageInstance=storage.getStorageInstance();
-//        if(storageInstance != null){
-//            storageInstance.playAudioUsingMediaPlayer(position);
-//        }
-
-
         jcAudios.add(JcAudio.createFromURL(extra.getString("songName"),extra.getString("downloadLink")));
 
         jcplayerView.initPlaylist(jcAudios, null);
